@@ -53,19 +53,18 @@ function Portfolio() {
       {/* Nav */}
       <header className="sticky top-0 z-50 backdrop-blur-xl bg-[#0a0f08]/70 border-b border-lime-500/10">
         <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <a href="#top" className="flex items-center gap-3">
+          <a href="#top" className="flex items-center gap-3 transition-transform duration-300 hover:scale-105 active:scale-95">
             <img src={uetLogo} alt="UET logo" className="w-10 h-10 rounded-full bg-white p-0.5" />
-            <span className="font-[Be_Vietnam_Pro,sans-serif] font-bold tracking-tight text-stone-100">{NAME}</span>
           </a>
           <ul className="hidden md:flex items-center gap-7 text-sm text-stone-400 font-medium">
-            <li><a href="#about" className="hover:text-lime-400 transition">Giới thiệu</a></li>
-            <li><a href="#projects" className="hover:text-lime-400 transition">Dự án</a></li>
-            <li><a href="#skills" className="hover:text-lime-400 transition">Kỹ năng</a></li>
-            <li><a href="#ethics" className="hover:text-lime-400 transition">Đạo đức AI</a></li>
-            <li><a href="#reflection" className="hover:text-lime-400 transition">Tổng kết</a></li>
+            <li><a href="#about" className="hover:text-lime-400 transition-all duration-300 active:scale-95 inline-block">Giới thiệu</a></li>
+            <li><a href="#projects" className="hover:text-lime-400 transition-all duration-300 active:scale-95 inline-block">Dự án</a></li>
+            <li><a href="#skills" className="hover:text-lime-400 transition-all duration-300 active:scale-95 inline-block">Kỹ năng</a></li>
+            <li><a href="#ethics" className="hover:text-lime-400 transition-all duration-300 active:scale-95 inline-block">Đạo đức AI</a></li>
+            <li><a href="#reflection" className="hover:text-lime-400 transition-all duration-300 active:scale-95 inline-block">Tổng kết</a></li>
             <li>
               <a href="mailto:dovansang@sinh.vien.edu.vn"
-                 className="px-4 py-1.5 rounded-full text-sm font-bold border border-lime-500/50 text-lime-400 hover:bg-lime-500 hover:text-[#0a0f08] transition-all">
+                 className="px-4 py-1.5 rounded-full text-sm font-bold border border-lime-500/50 text-lime-400 hover:bg-lime-500 hover:text-[#0a0f08] transition-all duration-300 hover:scale-105 active:scale-95 inline-block">
                 Liên hệ
               </a>
             </li>
@@ -82,19 +81,29 @@ function Portfolio() {
         <div className="max-w-7xl mx-auto px-6 pt-20 pb-28 grid lg:grid-cols-[1.4fr_1fr] gap-12 items-center">
           <div>
             <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold tracking-widest uppercase bg-lime-500/10 border border-lime-500/30 text-lime-400">
-              📚 Nhập môn Công nghệ Số & Ứng dụng AI Tạo sinh
+              📚 Nhập môn Công nghệ Số và Ứng dụng Trí tuệ Nhân tạo
             </span>
             <h1 className="mt-6 font-[Be_Vietnam_Pro,sans-serif] text-5xl md:text-7xl font-extrabold leading-[1.05] tracking-tight text-stone-100">
-              Xin chào, tôi là<br />
               <span className="font-[Playfair_Display,serif] italic font-bold bg-gradient-to-r from-lime-300 via-lime-400 to-emerald-400 bg-clip-text text-transparent">
                 {NAME}
               </span>
             </h1>
-            <ul className="mt-8 flex flex-wrap gap-3 text-sm text-stone-300">
-              <li className="px-3 py-1.5 rounded-lg bg-[#121a0f] border border-[#1e3319]">🎓 Ngành: Công nghệ Thông tin</li>
-              <li className="px-3 py-1.5 rounded-lg bg-[#121a0f] border border-[#1e3319]">🪪 MSV: 250203</li>
-              <li className="px-3 py-1.5 rounded-lg bg-[#121a0f] border border-[#1e3319]">📋 Lớp: DT2025-XX</li>
-              <li className="px-3 py-1.5 rounded-lg bg-[#121a0f] border border-[#1e3319]">🏫 Khoa: Công nghệ Số</li>
+            <ul className="mt-8 flex flex-wrap gap-3 text-sm text-white">
+              <li className="px-3 py-1.5 rounded-lg bg-[#121a0f] border border-[#1e3319] transition-all duration-300 hover:scale-[1.03] hover:border-lime-500/50 active:scale-95">
+                🏫 Trường <span className="bg-gradient-to-r from-lime-300 to-yellow-300 bg-clip-text text-transparent font-bold">Đại học Công Nghệ - Đại học Quốc gia Hà Nội</span>
+              </li>
+              <li className="px-3 py-1.5 rounded-lg bg-[#121a0f] border border-[#1e3319] transition-all duration-300 hover:scale-[1.03] hover:border-lime-500/50 active:scale-95">
+                🎓 Ngành <span className="bg-gradient-to-r from-lime-300 to-yellow-300 bg-clip-text text-transparent font-bold">Công nghệ Thông tin</span>
+              </li>
+              <li className="px-3 py-1.5 rounded-lg bg-[#121a0f] border border-[#1e3319] transition-all duration-300 hover:scale-[1.03] hover:border-lime-500/50 active:scale-95">
+                📅 Khoá <span className="bg-gradient-to-r from-lime-300 to-yellow-300 bg-clip-text text-transparent font-bold">K70</span>
+              </li>
+              <li className="px-3 py-1.5 rounded-lg bg-[#121a0f] border border-[#1e3319] transition-all duration-300 hover:scale-[1.03] hover:border-lime-500/50 active:scale-95">
+                🪪 Mã sinh viên <span className="bg-gradient-to-r from-lime-300 to-yellow-300 bg-clip-text text-transparent font-bold">25020343</span>
+              </li>
+              <li className="px-3 py-1.5 rounded-lg bg-[#121a0f] border border-[#1e3319] transition-all duration-300 hover:scale-[1.03] hover:border-lime-500/50 active:scale-95">
+                📋 Mã lớp học <span className="bg-gradient-to-r from-lime-300 to-yellow-300 bg-clip-text text-transparent font-bold">VNU1001_E252016</span>
+              </li>
             </ul>
             <p className="mt-8 max-w-2xl text-lg text-stone-400 leading-relaxed">
               Tôi là sinh viên năm nhất với niềm đam mê khám phá giao điểm giữa công nghệ và sự sáng tạo.
@@ -102,8 +111,8 @@ function Portfolio() {
               có trách nhiệm và xây dựng tư duy phản biện trong thời đại số.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
-              <a href="#projects" className="px-6 py-3 rounded-xl font-bold text-sm bg-lime-500 text-[#0a0f08] hover:bg-lime-400 transition shadow-lg shadow-lime-500/20">Xem Dự Án →</a>
-              <a href="mailto:dovansang@sinh.vien.edu.vn" className="px-6 py-3 rounded-xl font-bold text-sm text-lime-400 border border-[#1e3319] hover:border-lime-500/60 hover:bg-lime-500/5 transition">Liên Hệ Tôi</a>
+              <a href="#projects" className="px-6 py-3 rounded-xl font-bold text-sm bg-lime-500 text-[#0a0f08] hover:bg-lime-400 transition-all duration-300 shadow-lg shadow-lime-500/20 hover:scale-105 active:scale-95 inline-block">Xem Dự Án →</a>
+              <a href="mailto:dovansang@sinh.vien.edu.vn" className="px-6 py-3 rounded-xl font-bold text-sm text-lime-400 border border-[#1e3319] hover:border-lime-500/60 hover:bg-lime-500/5 transition-all duration-300 hover:scale-105 active:scale-95 inline-block">Liên Hệ Tôi</a>
             </div>
           </div>
           <div className="relative flex justify-center">
@@ -261,7 +270,7 @@ function Portfolio() {
           <div>
             <p className="font-bold text-stone-100 mb-3">Liên Hệ Học Thuật</p>
             <p className="text-sm text-stone-400">✉ <a href="mailto:dovansang@sinh.vien.edu.vn" className="hover:text-lime-400 font-semibold">dovansang@sinh.vien.edu.vn</a></p>
-            <p className="mt-2 text-sm text-stone-400">🪪 MSV: 250203</p>
+            <p className="mt-2 text-sm text-stone-400">🪪 MSV: 25020343</p>
           </div>
         </div>
       </footer>
