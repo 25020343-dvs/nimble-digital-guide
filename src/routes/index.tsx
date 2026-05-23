@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import uetLogo from "@/assets/uet-logo.png";
+import { SmoothCursor, attachRipple } from "@/components/SmoothCursor";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -50,6 +51,7 @@ const ethics = [
 function Portfolio() {
   return (
     <div className="min-h-screen bg-[#0a0f08] text-stone-200 font-[Nunito,sans-serif] selection:bg-lime-500/30">
+      <SmoothCursor />
       {/* Nav */}
       <header className="sticky top-0 z-50 backdrop-blur-xl bg-[#0a0f08]/70 border-b border-lime-500/10">
         <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
