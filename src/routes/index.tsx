@@ -59,13 +59,13 @@ function Portfolio() {
             <img src={uetLogo} alt="UET logo" className="w-10 h-10 rounded-full bg-white p-0.5" />
           </a>
           <ul className="hidden md:flex items-center gap-7 text-sm text-stone-400 font-medium">
-            <li><a href="#about" className="hover:text-lime-400 transition-all duration-300 active:scale-95 inline-block">Giới thiệu</a></li>
-            <li><a href="#projects" className="hover:text-lime-400 transition-all duration-300 active:scale-95 inline-block">Dự án</a></li>
-            <li><a href="#skills" className="hover:text-lime-400 transition-all duration-300 active:scale-95 inline-block">Kỹ năng</a></li>
-            <li><a href="#ethics" className="hover:text-lime-400 transition-all duration-300 active:scale-95 inline-block">Đạo đức AI</a></li>
-            <li><a href="#reflection" className="hover:text-lime-400 transition-all duration-300 active:scale-95 inline-block">Tổng kết</a></li>
+            <li><a onClick={attachRipple} href="#about" className="relative overflow-hidden px-2 py-1 rounded-md hover:text-lime-400 transition-all duration-300 active:scale-95 inline-block">Giới thiệu</a></li>
+            <li><a onClick={attachRipple} href="#projects" className="relative overflow-hidden px-2 py-1 rounded-md hover:text-lime-400 transition-all duration-300 active:scale-95 inline-block">Dự án</a></li>
+            <li><a onClick={attachRipple} href="#skills" className="relative overflow-hidden px-2 py-1 rounded-md hover:text-lime-400 transition-all duration-300 active:scale-95 inline-block">Kỹ năng</a></li>
+            <li><a onClick={attachRipple} href="#ethics" className="relative overflow-hidden px-2 py-1 rounded-md hover:text-lime-400 transition-all duration-300 active:scale-95 inline-block">Đạo đức AI</a></li>
+            <li><a onClick={attachRipple} href="#reflection" className="relative overflow-hidden px-2 py-1 rounded-md hover:text-lime-400 transition-all duration-300 active:scale-95 inline-block">Tổng kết</a></li>
             <li>
-              <a href="mailto:dovansang@sinh.vien.edu.vn"
+              <a onClick={attachRipple} href="mailto:dovansang@sinh.vien.edu.vn"
                  className="px-4 py-1.5 rounded-full text-sm font-bold border border-lime-500/50 text-lime-400 hover:bg-lime-500 hover:text-[#0a0f08] transition-all duration-300 hover:scale-105 active:scale-95 inline-block">
                 Liên hệ
               </a>
@@ -113,8 +113,8 @@ function Portfolio() {
               có trách nhiệm và xây dựng tư duy phản biện trong thời đại số.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
-              <a href="#projects" className="px-6 py-3 rounded-xl font-bold text-sm bg-lime-500 text-[#0a0f08] hover:bg-lime-400 transition-all duration-300 shadow-lg shadow-lime-500/20 hover:scale-105 active:scale-95 inline-block">Xem Dự Án →</a>
-              <a href="mailto:dovansang@sinh.vien.edu.vn" className="px-6 py-3 rounded-xl font-bold text-sm text-lime-400 border border-[#1e3319] hover:border-lime-500/60 hover:bg-lime-500/5 transition-all duration-300 hover:scale-105 active:scale-95 inline-block">Liên Hệ Tôi</a>
+              <a onClick={attachRipple} href="#projects" className="relative overflow-hidden px-6 py-3 rounded-xl font-bold text-sm bg-lime-500 text-[#0a0f08] hover:bg-lime-400 transition-all duration-300 shadow-lg shadow-lime-500/20 hover:scale-105 active:scale-95 inline-block">Xem Dự Án →</a>
+              <a onClick={attachRipple} href="mailto:dovansang@sinh.vien.edu.vn" className="relative overflow-hidden px-6 py-3 rounded-xl font-bold text-sm text-lime-400 border border-[#1e3319] hover:border-lime-500/60 hover:bg-lime-500/5 transition-all duration-300 hover:scale-105 active:scale-95 inline-block">Liên Hệ Tôi</a>
             </div>
           </div>
           <div className="relative flex justify-center">
@@ -150,7 +150,7 @@ function Portfolio() {
       <SectionTitle id="about" eyebrow="Bài tập học phần" title="Các Dự Án Cốt Lõi" sub="Sáu bài tập nền tảng hoàn thành trong học kỳ, mỗi bài xây dựng một năng lực số riêng biệt." />
       <section id="projects" className="max-w-7xl mx-auto px-6 pb-24 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map(p => (
-          <article key={p.n} className="group p-6 rounded-2xl bg-gradient-to-b from-[#0f160c] to-[#0a0f08] border border-[#1e3319] hover:border-lime-500/40 transition">
+          <article key={p.n} onClick={attachRipple} className="group relative overflow-hidden p-6 rounded-2xl bg-gradient-to-b from-[#0f160c] to-[#0a0f08] border border-[#1e3319] hover:border-lime-500/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-lime-500/10 cursor-pointer active:scale-[0.98]">
             <div className="flex items-center justify-between">
               <span className="text-3xl">{p.icon}</span>
               <span className="text-xs font-bold tracking-widest text-lime-500/70">{p.n}</span>
@@ -167,7 +167,7 @@ function Portfolio() {
               <p className="text-xs uppercase tracking-widest text-lime-400 font-bold">Tóm tắt thực hiện</p>
               <p className="mt-1.5 text-sm text-stone-400 leading-relaxed">{p.summary}</p>
             </div>
-            <a href="#" className="mt-5 inline-block text-sm font-bold text-lime-400 group-hover:text-lime-300">Xem Sản phẩm →</a>
+            <span className="mt-5 inline-block text-sm font-bold text-lime-400 group-hover:text-lime-300 group-hover:translate-x-1 transition-transform">Xem Sản phẩm →</span>
           </article>
         ))}
       </section>
@@ -262,11 +262,11 @@ function Portfolio() {
           <div>
             <p className="font-bold text-stone-100 mb-3">Điều hướng</p>
             <ul className="space-y-2 text-sm text-stone-400">
-              <li><a href="#about" className="hover:text-lime-400">Giới thiệu</a></li>
-              <li><a href="#projects" className="hover:text-lime-400">Dự án</a></li>
-              <li><a href="#skills" className="hover:text-lime-400">Kỹ năng</a></li>
-              <li><a href="#ethics" className="hover:text-lime-400">Đạo đức AI</a></li>
-              <li><a href="#reflection" className="hover:text-lime-400">Tổng kết</a></li>
+              <li><a onClick={attachRipple} href="#about" className="relative overflow-hidden inline-block px-1 hover:text-lime-400 transition-all duration-300 active:scale-95">Giới thiệu</a></li>
+              <li><a onClick={attachRipple} href="#projects" className="relative overflow-hidden inline-block px-1 hover:text-lime-400 transition-all duration-300 active:scale-95">Dự án</a></li>
+              <li><a onClick={attachRipple} href="#skills" className="relative overflow-hidden inline-block px-1 hover:text-lime-400 transition-all duration-300 active:scale-95">Kỹ năng</a></li>
+              <li><a onClick={attachRipple} href="#ethics" className="relative overflow-hidden inline-block px-1 hover:text-lime-400 transition-all duration-300 active:scale-95">Đạo đức AI</a></li>
+              <li><a onClick={attachRipple} href="#reflection" className="relative overflow-hidden inline-block px-1 hover:text-lime-400 transition-all duration-300 active:scale-95">Tổng kết</a></li>
             </ul>
           </div>
           <div>
