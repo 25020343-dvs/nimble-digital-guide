@@ -110,10 +110,14 @@ function RootShell({ children }: { children: React.ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const router = useRouter();
+  const locationKey = router.state.location?.pathname ?? "/";
 
   return (
     <QueryClientProvider client={queryClient}>
-      <Outlet />
+      <main className="page-transition">
+        <Outlet key={locationKey} />
+      </main>
     </QueryClientProvider>
   );
 }
