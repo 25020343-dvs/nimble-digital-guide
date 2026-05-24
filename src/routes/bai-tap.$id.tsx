@@ -78,7 +78,7 @@ function BaiTapPage() {
         <div className="p-7 rounded-2xl bg-[#0f160c] border border-[#1e3319]">
           <h2 className="font-[Be_Vietnam_Pro,sans-serif] font-bold text-lime-400 text-lg">📋 Yêu cầu bài tập</h2>
           <ol className="mt-4 space-y-3 text-sm text-stone-300 leading-relaxed list-decimal list-inside marker:text-lime-400 marker:font-bold">
-            {ex.requirements.map((r, i) => (
+            {ex.requirements.map((r: string, i: number) => (
               <li key={i}>{r}</li>
             ))}
           </ol>
