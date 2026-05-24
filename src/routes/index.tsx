@@ -1,6 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import uetLogo from "@/assets/uet-logo.png";
 import { SmoothCursor, attachRipple } from "@/components/SmoothCursor";
+import { exercises } from "@/data/exercises";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -17,15 +18,7 @@ function Index() {
 }
 
 const NAME = "Đỗ Văn Sang";
-
-const projects = [
-  { icon: "🗂️", n: "01", title: "Quản lý Tệp & Thư mục Cơ bản", goal: "Tối ưu hóa cấu trúc thư mục và quy ước đặt tên tệp cho quy trình làm việc số hiệu quả.", summary: "Kiểm tra tệp hiện có, áp dụng cấu trúc đặt tên YYYY-MM-DD_TênDựÁn_Phiênbản và di chuyển toàn bộ tài liệu khóa học vào hệ thống thư mục phân cấp trên Google Drive." },
-  { icon: "🔍", n: "02", title: "Tìm kiếm & Đánh giá Thông tin Học thuật", goal: "Sử dụng toán tử tìm kiếm nâng cao và kiểm tra độ tin cậy của nguồn bằng các tiêu chí đánh giá.", summary: "Thực hành toán tử Google Scholar (site:, filetype:, \"cụm từ chính xác\") và áp dụng tiêu chí CRAAP để đánh giá 10 nguồn về tính hiện thời, độ liên quan, thẩm quyền, độ chính xác." },
-  { icon: "⚡", n: "03", title: "Thiết kế Câu lệnh AI Hiệu quả", goal: "So sánh câu lệnh ban đầu với câu lệnh cải tiến và đánh giá chất lượng đầu ra của AI trong học tập.", summary: "Thực hiện 15 thử nghiệm A/B prompt trên ChatGPT và Gemini, ghi lại sự khác biệt chất lượng bằng thang đánh giá tự thiết kế (độ chính xác, chiều sâu, định dạng)." },
-  { icon: "🤝", n: "04", title: "Cộng tác Trực tuyến cho Dự án Nhóm", goal: "Minh chứng việc sử dụng công cụ quản lý dự án và quy trình làm việc nhóm trong môi trường số.", summary: "Dẫn dắt nhóm 4 người dùng Trello quản lý công việc, Google Docs đồng soạn thảo và Zoom họp hàng tuần, tạo ra báo cáo nghiên cứu cộng tác 10 trang." },
-  { icon: "🎨", n: "05", title: "AI Tạo sinh cho Sáng tạo Nội dung", goal: "Trình bày một sản phẩm số sáng tạo: bài viết, video hoặc thiết kế đồ họa có hỗ trợ của AI.", summary: "Sản xuất video giải thích 1 phút về biến đổi khí hậu dùng Runway ML tạo hình ảnh, ElevenLabs tổng hợp giọng đọc và CapCut dựng phim và phụ đề." },
-  { icon: "⚖️", n: "06", title: "AI Có Trách nhiệm trong Học tập & Nghiên cứu", goal: "Xây dựng bộ quy tắc đạo đức cá nhân khi sử dụng công cụ AI một cách an toàn và có trách nhiệm.", summary: "Nghiên cứu hướng dẫn đạo đức AI của UNESCO và Đạo luật AI EU, tổng hợp năm nguyên tắc cá nhân và viết bài phản biện 1.200 từ với các ví dụ thực tế." },
-];
+const EMAIL = "25020343@vnu.edu.vn";
 
 const skills = [
   { icon: "🗂️", name: "Quản lý Tệp & Thư mục", level: "THÀNH THẠO", pct: 85 },
@@ -59,13 +52,13 @@ function Portfolio() {
             <img src={uetLogo} alt="UET logo" className="w-10 h-10 rounded-full bg-white p-0.5" />
           </a>
           <ul className="hidden md:flex items-center gap-7 text-sm text-stone-400 font-medium">
-            <li><a onClick={attachRipple} href="#about" className="relative overflow-hidden px-2 py-1 rounded-md hover:text-lime-400 transition-all duration-300 active:scale-95 inline-block">Giới thiệu</a></li>
-            <li><a onClick={attachRipple} href="#projects" className="relative overflow-hidden px-2 py-1 rounded-md hover:text-lime-400 transition-all duration-300 active:scale-95 inline-block">Dự án</a></li>
+            <li><a onClick={attachRipple} href="#top" className="relative overflow-hidden px-2 py-1 rounded-md hover:text-lime-400 transition-all duration-300 active:scale-95 inline-block">Giới thiệu</a></li>
+            <li><a onClick={attachRipple} href="#projects" className="relative overflow-hidden px-2 py-1 rounded-md hover:text-lime-400 transition-all duration-300 active:scale-95 inline-block">Bài tập</a></li>
             <li><a onClick={attachRipple} href="#skills" className="relative overflow-hidden px-2 py-1 rounded-md hover:text-lime-400 transition-all duration-300 active:scale-95 inline-block">Kỹ năng</a></li>
             <li><a onClick={attachRipple} href="#ethics" className="relative overflow-hidden px-2 py-1 rounded-md hover:text-lime-400 transition-all duration-300 active:scale-95 inline-block">Đạo đức AI</a></li>
             <li><a onClick={attachRipple} href="#reflection" className="relative overflow-hidden px-2 py-1 rounded-md hover:text-lime-400 transition-all duration-300 active:scale-95 inline-block">Tổng kết</a></li>
             <li>
-              <a onClick={attachRipple} href="mailto:dovansang@sinh.vien.edu.vn"
+              <a onClick={attachRipple} href="#contact"
                  className="px-4 py-1.5 rounded-full text-sm font-bold border border-lime-500/50 text-lime-400 hover:bg-lime-500 hover:text-[#0a0f08] transition-all duration-300 hover:scale-105 active:scale-95 inline-block">
                 Liên hệ
               </a>
@@ -113,8 +106,8 @@ function Portfolio() {
               có trách nhiệm và xây dựng tư duy phản biện trong thời đại số.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
-              <a onClick={attachRipple} href="#projects" className="relative overflow-hidden px-6 py-3 rounded-xl font-bold text-sm bg-lime-500 text-[#0a0f08] hover:bg-lime-400 transition-all duration-300 shadow-lg shadow-lime-500/20 hover:scale-105 active:scale-95 inline-block">Xem Dự Án →</a>
-              <a onClick={attachRipple} href="mailto:dovansang@sinh.vien.edu.vn" className="relative overflow-hidden px-6 py-3 rounded-xl font-bold text-sm text-lime-400 border border-[#1e3319] hover:border-lime-500/60 hover:bg-lime-500/5 transition-all duration-300 hover:scale-105 active:scale-95 inline-block">Liên Hệ Tôi</a>
+              <a onClick={attachRipple} href="#projects" className="relative overflow-hidden px-6 py-3 rounded-xl font-bold text-sm bg-lime-500 text-[#0a0f08] hover:bg-lime-400 transition-all duration-300 shadow-lg shadow-lime-500/20 hover:scale-105 active:scale-95 inline-block">Xem Bài Tập →</a>
+              <a onClick={attachRipple} href="#contact" className="relative overflow-hidden px-6 py-3 rounded-xl font-bold text-sm text-lime-400 border border-[#1e3319] hover:border-lime-500/60 hover:bg-lime-500/5 transition-all duration-300 hover:scale-105 active:scale-95 inline-block">Liên Hệ Tôi</a>
             </div>
           </div>
           <div className="relative flex justify-center">
@@ -147,28 +140,38 @@ function Portfolio() {
         </div>
       </section>
 
-      <SectionTitle id="about" eyebrow="Bài tập học phần" title="Các Dự Án Cốt Lõi" sub="Sáu bài tập nền tảng hoàn thành trong học kỳ, mỗi bài xây dựng một năng lực số riêng biệt." />
+      <SectionTitle eyebrow="Bài tập học phần" title="Sáu Bài Tập Cốt Lõi" sub="Sáu bài tập nền tảng theo yêu cầu học phần. Nhấn vào mỗi thẻ để xem chi tiết yêu cầu và nội dung trình bày." />
       <section id="projects" className="max-w-7xl mx-auto px-6 pb-24 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {projects.map(p => (
-          <article key={p.n} onClick={attachRipple} className="group relative overflow-hidden p-6 rounded-2xl bg-gradient-to-b from-[#0f160c] to-[#0a0f08] border border-[#1e3319] hover:border-lime-500/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-lime-500/10 cursor-pointer active:scale-[0.98]">
+        {exercises.map((p) => (
+          <Link
+            key={p.n}
+            to="/bai-tap/$id"
+            params={{ id: p.id }}
+            onClick={attachRipple}
+            className="group relative overflow-hidden flex flex-col p-6 rounded-2xl bg-gradient-to-b from-[#0f160c] to-[#0a0f08] border border-[#1e3319] hover:border-lime-500/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-lime-500/10 cursor-pointer active:scale-[0.98]"
+          >
             <div className="flex items-center justify-between">
-              <span className="text-3xl">{p.icon}</span>
+              <span className="text-3xl leading-none">{p.icon}</span>
               <span className="text-xs font-bold tracking-widest text-lime-500/70">{p.n}</span>
             </div>
-            <div className="mt-5">
+            <div className="mt-5 min-h-[88px]">
               <p className="text-xs uppercase tracking-widest text-stone-500">Bài tập {p.n}</p>
-              <h3 className="mt-1 font-[Be_Vietnam_Pro,sans-serif] font-bold text-stone-100 text-lg leading-snug">{p.title}</h3>
-            </div>
-            <div className="mt-5">
-              <p className="text-xs uppercase tracking-widest text-lime-400 font-bold">Mục tiêu</p>
-              <p className="mt-1.5 text-sm text-stone-400 leading-relaxed">{p.goal}</p>
+              <h3 className="mt-1 font-[Be_Vietnam_Pro,sans-serif] font-bold text-stone-100 text-[17px] leading-[1.35]">
+                {p.title.replace(/^Bài \d+\s*—\s*/, "")}
+              </h3>
             </div>
             <div className="mt-4">
-              <p className="text-xs uppercase tracking-widest text-lime-400 font-bold">Tóm tắt thực hiện</p>
-              <p className="mt-1.5 text-sm text-stone-400 leading-relaxed">{p.summary}</p>
+              <p className="text-[11px] uppercase tracking-widest text-lime-400 font-bold">Mục tiêu</p>
+              <p className="mt-1.5 text-sm text-stone-400 leading-relaxed line-clamp-4">{p.goal}</p>
             </div>
-            <span className="mt-5 inline-block text-sm font-bold text-lime-400 group-hover:text-lime-300 group-hover:translate-x-1 transition-transform">Xem Sản phẩm →</span>
-          </article>
+            <div className="mt-4">
+              <p className="text-[11px] uppercase tracking-widest text-lime-400 font-bold">Định hướng trình bày</p>
+              <p className="mt-1.5 text-sm text-stone-400 leading-relaxed line-clamp-3">{p.summary}</p>
+            </div>
+            <span className="mt-5 inline-block text-sm font-bold text-lime-400 group-hover:text-lime-300 group-hover:translate-x-1 transition-transform">
+              Xem Bài tập →
+            </span>
+          </Link>
         ))}
       </section>
 
@@ -247,9 +250,9 @@ function Portfolio() {
         </div>
       </section>
 
-      <footer className="border-t border-[#1e3319] bg-[#080c06]">
-        <div className="max-w-7xl mx-auto px-6 py-14 grid md:grid-cols-4 gap-10">
-          <div className="md:col-span-2">
+      <footer id="contact" className="border-t border-[#1e3319] bg-[#080c06]">
+        <div className="max-w-7xl mx-auto px-6 py-14 grid md:grid-cols-12 gap-10">
+          <div className="md:col-span-4">
             <div className="flex items-center gap-3">
               <img src={uetLogo} alt="UET" className="w-10 h-10 rounded-full bg-white p-0.5" />
               <span className="font-[Be_Vietnam_Pro,sans-serif] font-bold text-stone-100">{NAME}</span>
@@ -259,19 +262,38 @@ function Portfolio() {
             </p>
             <p className="mt-6 text-xs text-stone-500">© 2025 {NAME}. Bảo lưu mọi quyền.</p>
           </div>
-          <div>
+          <div className="md:col-span-2">
             <p className="font-bold text-stone-100 mb-3">Điều hướng</p>
             <ul className="space-y-2 text-sm text-stone-400">
-              <li><a onClick={attachRipple} href="#about" className="relative overflow-hidden inline-block px-1 hover:text-lime-400 transition-all duration-300 active:scale-95">Giới thiệu</a></li>
-              <li><a onClick={attachRipple} href="#projects" className="relative overflow-hidden inline-block px-1 hover:text-lime-400 transition-all duration-300 active:scale-95">Dự án</a></li>
+              <li><a onClick={attachRipple} href="#top" className="relative overflow-hidden inline-block px-1 hover:text-lime-400 transition-all duration-300 active:scale-95">Giới thiệu</a></li>
+              <li><a onClick={attachRipple} href="#projects" className="relative overflow-hidden inline-block px-1 hover:text-lime-400 transition-all duration-300 active:scale-95">Bài tập</a></li>
               <li><a onClick={attachRipple} href="#skills" className="relative overflow-hidden inline-block px-1 hover:text-lime-400 transition-all duration-300 active:scale-95">Kỹ năng</a></li>
               <li><a onClick={attachRipple} href="#ethics" className="relative overflow-hidden inline-block px-1 hover:text-lime-400 transition-all duration-300 active:scale-95">Đạo đức AI</a></li>
               <li><a onClick={attachRipple} href="#reflection" className="relative overflow-hidden inline-block px-1 hover:text-lime-400 transition-all duration-300 active:scale-95">Tổng kết</a></li>
             </ul>
           </div>
-          <div>
-            <p className="font-bold text-stone-100 mb-3">Liên Hệ Học Thuật</p>
-            <p className="text-sm text-stone-400">✉ <a href="mailto:dovansang@sinh.vien.edu.vn" className="hover:text-lime-400 font-semibold">dovansang@sinh.vien.edu.vn</a></p>
+          <div className="md:col-span-3">
+            <p className="font-bold text-stone-100 mb-3">Bài tập</p>
+            <ul className="space-y-2 text-sm text-stone-400">
+              {exercises.map((e) => (
+                <li key={e.id}>
+                  <Link
+                    to="/bai-tap/$id"
+                    params={{ id: e.id }}
+                    onClick={attachRipple}
+                    className="relative overflow-hidden inline-block px-1 hover:text-lime-400 transition-all duration-300 active:scale-95"
+                  >
+                    {e.icon} Bài {e.n} — {e.shortTitle}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="md:col-span-3">
+            <p className="font-bold text-stone-100 mb-3">Liên Hệ</p>
+            <p className="text-sm text-stone-400">
+              ✉ <a href={`mailto:${EMAIL}`} className="hover:text-lime-400 font-semibold break-all">{EMAIL}</a>
+            </p>
             <p className="mt-2 text-sm text-stone-400">🪪 MSV: 25020343</p>
           </div>
         </div>
