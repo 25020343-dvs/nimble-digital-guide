@@ -9,9 +9,21 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TongKetRouteImport } from './routes/tong-ket'
+import { Route as DuAnRouteImport } from './routes/du-an'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as BaiTapIdRouteImport } from './routes/bai-tap.$id'
 
+const TongKetRoute = TongKetRouteImport.update({
+  id: '/tong-ket',
+  path: '/tong-ket',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DuAnRoute = DuAnRouteImport.update({
+  id: '/du-an',
+  path: '/du-an',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -25,32 +37,54 @@ const BaiTapIdRoute = BaiTapIdRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/du-an': typeof DuAnRoute
+  '/tong-ket': typeof TongKetRoute
   '/bai-tap/$id': typeof BaiTapIdRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/du-an': typeof DuAnRoute
+  '/tong-ket': typeof TongKetRoute
   '/bai-tap/$id': typeof BaiTapIdRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/du-an': typeof DuAnRoute
+  '/tong-ket': typeof TongKetRoute
   '/bai-tap/$id': typeof BaiTapIdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/bai-tap/$id'
+  fullPaths: '/' | '/du-an' | '/tong-ket' | '/bai-tap/$id'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/bai-tap/$id'
-  id: '__root__' | '/' | '/bai-tap/$id'
+  to: '/' | '/du-an' | '/tong-ket' | '/bai-tap/$id'
+  id: '__root__' | '/' | '/du-an' | '/tong-ket' | '/bai-tap/$id'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  DuAnRoute: typeof DuAnRoute
+  TongKetRoute: typeof TongKetRoute
   BaiTapIdRoute: typeof BaiTapIdRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/tong-ket': {
+      id: '/tong-ket'
+      path: '/tong-ket'
+      fullPath: '/tong-ket'
+      preLoaderRoute: typeof TongKetRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/du-an': {
+      id: '/du-an'
+      path: '/du-an'
+      fullPath: '/du-an'
+      preLoaderRoute: typeof DuAnRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -70,8 +104,20 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  DuAnRoute: DuAnRoute,
+  TongKetRoute: TongKetRoute,
   BaiTapIdRoute: BaiTapIdRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
