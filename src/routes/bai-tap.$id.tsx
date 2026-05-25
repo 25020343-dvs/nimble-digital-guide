@@ -86,21 +86,57 @@ function BaiTapPage() {
         <div className="p-7 rounded-2xl bg-[#0f160c] border border-[#1e3319]">
           <h2 className="font-[Be_Vietnam_Pro,sans-serif] font-bold text-lime-400 text-lg">🎯 Định hướng trình bày</h2>
           <p className="mt-4 text-sm text-stone-300 leading-relaxed">{ex.summary}</p>
-          <p className="mt-4 text-sm text-stone-400 leading-relaxed">
-            Khu vực bên dưới là không gian để bạn bổ sung sản phẩm cá nhân: hình ảnh chụp màn hình, đoạn văn,
-            đường liên kết tới file PDF/video, phân tích — bất cứ minh chứng nào thể hiện quá trình thực hiện.
-          </p>
+          <a
+            href={ex.fileUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={attachRipple}
+            download
+            className="mt-5 inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-gradient-to-r from-lime-400 to-emerald-500 text-[#0a0f08] font-bold text-sm transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg shadow-lime-500/20"
+          >
+            📄 Tải bài tập đầy đủ (.docx)
+          </a>
+        </div>
+      </section>
+
+      <section className="max-w-5xl mx-auto px-6 pb-12">
+        <div className="p-7 rounded-2xl bg-[#0f160c] border border-[#1e3319]">
+          <h2 className="font-[Be_Vietnam_Pro,sans-serif] font-bold text-lime-400 text-lg">🛠️ Tóm tắt quá trình thực hiện</h2>
+          <ol className="mt-5 space-y-4">
+            {ex.process.map((step: string, i: number) => (
+              <li key={i} className="flex gap-4">
+                <span className="shrink-0 w-8 h-8 rounded-full bg-lime-500/15 border border-lime-500/40 grid place-items-center text-lime-400 font-bold text-sm">
+                  {i + 1}
+                </span>
+                <p className="text-sm md:text-[15px] text-stone-300 leading-relaxed pt-1">{step}</p>
+              </li>
+            ))}
+          </ol>
+          <div className="mt-7 p-4 rounded-xl bg-[#0a0f08] border border-dashed border-[#2a4422] flex items-center justify-between gap-4 flex-wrap">
+            <p className="text-sm text-stone-400">
+              Xem toàn bộ sản phẩm, ảnh chụp minh hoạ và phân tích chi tiết trong file đính kèm:
+            </p>
+            <a
+              href={ex.fileUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={attachRipple}
+              download
+              className="px-4 py-2 rounded-full border border-lime-500/50 text-lime-400 font-bold text-sm hover:bg-lime-500 hover:text-[#0a0f08] transition-all duration-300 hover:scale-105 active:scale-95"
+            >
+              ⬇ Tải sản phẩm bài tập
+            </a>
+          </div>
         </div>
       </section>
 
       <section className="max-w-5xl mx-auto px-6 pb-20">
         <div className="p-8 rounded-2xl bg-gradient-to-br from-[#121a0f] to-[#0a0f08] border border-dashed border-[#2a4422]">
-          <h2 className="font-[Be_Vietnam_Pro,sans-serif] font-bold text-stone-100 text-xl">📝 Nội dung của tôi</h2>
-          <p className="mt-2 text-sm text-stone-500">Thêm phần trình bày, ảnh chụp và phân tích của bạn vào khu vực này.</p>
+          <h2 className="font-[Be_Vietnam_Pro,sans-serif] font-bold text-stone-100 text-xl">📝 Ghi chú thêm</h2>
+          <p className="mt-2 text-sm text-stone-500">Khu vực mở rộng để bổ sung phân tích, suy ngẫm hoặc minh chứng bổ sung nếu cần.</p>
           <div className="mt-6 grid gap-4">
-            <Placeholder label="Tóm tắt quá trình thực hiện" />
-            <Placeholder label="Minh chứng / Ảnh chụp / Liên kết sản phẩm" />
-            <Placeholder label="Phân tích, bài học rút ra" />
+            <Placeholder label="Phân tích sâu / Bài học rút ra" />
+            <Placeholder label="Minh chứng bổ sung (ảnh, liên kết)" />
           </div>
         </div>
       </section>
