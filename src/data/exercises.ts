@@ -41,14 +41,10 @@ export const exercises: Exercise[] = [
       "Khôi phục từ Thùng rác (tùy chọn): mở Recycle Bin → Restore tệp đã xóa.",
     ],
     process: [
-      "Mở File Explorer bằng Windows + E và truy cập ổ D: để có không gian thực hành tách biệt với ổ hệ thống.",
-      "Tạo thư mục gốc ThucHanh_DoVanSang bằng menu chuột phải → New → Folder, đặt tên có tiền tố nhận diện cá nhân.",
-      "Bên trong thư mục, tạo tệp GhiChu.txt rồi đổi tên thành GhiChuQuanTrong.txt để luyện thao tác Rename.",
-      "Tạo thư mục con TaiLieu để minh hoạ cấu trúc phân cấp; thực hiện Copy (Ctrl+C) tệp gốc và Paste (Ctrl+V) sang TaiLieu.",
-      "Tạo tệp DiChuyen.txt rồi dùng Cut (Ctrl+X) + Paste để di chuyển sang TaiLieu, so sánh sự khác nhau giữa Copy và Cut.",
-      "Xoá GhiChuQuanTrong.txt bằng phím Delete (vào Recycle Bin) và xoá vĩnh viễn DiChuyen.txt bằng Shift + Delete.",
-      "Mở Recycle Bin, khôi phục lại tệp đã xoá bằng chuột phải → Restore và kiểm chứng tệp trở về vị trí cũ.",
-      "Chụp ảnh từng bước, chú thích thao tác và rút ra quy tắc đặt tên: viết liền không dấu, có tiền tố mục đích và họ tên.",
+      "Mở File Explorer, tạo thư mục gốc ThucHanh_DoVanSang trên ổ D: và thư mục con TaiLieu.",
+      "Tạo tệp GhiChu.txt, đổi tên thành GhiChuQuanTrong.txt; luyện Copy (Ctrl+C) và Cut (Ctrl+X) sang TaiLieu.",
+      "Xoá tạm bằng Delete và xoá vĩnh viễn bằng Shift + Delete; khôi phục từ Recycle Bin.",
+      "Chụp màn hình từng bước, rút ra quy tắc đặt tên có hệ thống (viết liền – không dấu – có tiền tố).",
     ],
     objectives: [
       "Hiểu vai trò của hệ điều hành trong tổ chức dữ liệu cá nhân và phân biệt rõ ổ hệ thống với ổ làm việc.",
