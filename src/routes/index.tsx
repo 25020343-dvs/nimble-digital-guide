@@ -304,7 +304,7 @@ function Portfolio() {
 
 function SectionTitle({ id, eyebrow, title, sub }: { id?: string; eyebrow: string; title: string; sub?: string }) {
   return (
-    <div id={id} className="max-w-7xl mx-auto px-6 pt-20 pb-10 text-center">
+    <div id={id} className="scroll-mt-24 max-w-7xl mx-auto px-6 pt-20 pb-10 text-center">
       <p className="text-xs font-bold tracking-[0.3em] uppercase text-lime-400">{eyebrow}</p>
       <h2 className="mt-3 font-[Be_Vietnam_Pro,sans-serif] text-4xl md:text-5xl font-extrabold text-stone-100 tracking-tight">{title}</h2>
       {sub && <p className="mt-4 max-w-2xl mx-auto text-stone-400">{sub}</p>}
