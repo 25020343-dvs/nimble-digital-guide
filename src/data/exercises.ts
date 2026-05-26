@@ -203,13 +203,10 @@ export const exercises: Exercise[] = [
       "Viết phân tích về vai trò của AI trong quá trình sáng tạo: những phần AI làm tốt và phần còn hạn chế; cách AI thay đổi quy trình sáng tạo; các vấn đề đạo đức cần cân nhắc.",
     ],
     process: [
-      "Xác định chủ đề & đối tượng: bài thuyết trình 8 slide cho sinh viên về tác hại của việc thức khuya.",
-      "ChatGPT: prompt “Viết nội dung cho bài thuyết trình 8 slide về tác hại của việc thức khuya, ngắn gọn, dễ hiểu” → nhận dàn ý 8 slide (Giới thiệu → Thực trạng → Tác hại → Nguyên nhân → Giải pháp → Kết luận).",
-      "Gemini: prompt tiếng Anh tạo hình ảnh minh hoạ (“A tired college student studying late at night, dark room, laptop light, realistic”) cho slide tác hại sức khoẻ.",
-      "Canva AI: dùng Magic Design để dựng layout, đồng bộ font – màu – icon cho 8 slide.",
-      "Chỉnh sửa cá nhân: rút gọn câu chữ, bổ sung số liệu thực tế, thay icon trùng lặp; viết phần kết luận theo giọng riêng.",
-      "Sản phẩm cuối: bài thuyết trình Canva công khai — https://canva.link/zprfakst0n3afzq",
-      "Phân tích vai trò AI: nhanh và đa dạng nhưng còn chung chung, cần kiểm chứng số liệu, ghi rõ phần nào AI hỗ trợ để đảm bảo minh bạch.",
+      "Xác định chủ đề: thuyết trình 8 slide “Tác hại của việc thức khuya” cho sinh viên.",
+      "Dùng ChatGPT lấy dàn ý 8 slide; Gemini tạo ảnh minh hoạ; Canva AI dựng layout đồng bộ font – màu – icon.",
+      "Chỉnh sửa cá nhân: rút gọn câu chữ, bổ sung số liệu thực tế, viết kết luận theo giọng riêng.",
+      "Xuất sản phẩm Canva công khai và phân tích vai trò – hạn chế của AI, ghi rõ phần nào AI hỗ trợ.",
     ],
     objectives: [
       "Hiểu khái niệm AI tạo sinh (Generative AI) và phân loại công cụ theo đầu ra: văn bản – hình ảnh – thiết kế – video.",
