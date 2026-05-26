@@ -1,5 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { exercises, getExercise } from "@/data/exercises";
+import { exercises, getExercise, type Exercise } from "@/data/exercises";
 import uetLogo from "@/assets/uet-logo.png";
 import { SmoothCursor, attachRipple } from "@/components/SmoothCursor";
 
@@ -31,7 +31,7 @@ export const Route = createFileRoute("/bai-tap/$id")({
 });
 
 function BaiTapPage() {
-  const ex = Route.useLoaderData();
+  const ex = Route.useLoaderData() as Exercise;
   const idx = exercises.findIndex((e) => e.id === ex.id);
   const prev = exercises[idx - 1];
   const next = exercises[idx + 1];
