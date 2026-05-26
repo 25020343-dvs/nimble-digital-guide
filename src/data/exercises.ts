@@ -243,14 +243,10 @@ export const exercises: Exercise[] = [
       "Tạo một infographic minh họa “Sử dụng AI có trách nhiệm trong học thuật”.",
     ],
     process: [
-      "Nghiên cứu chính sách AI của các trường đại học lớn: AI được chấp nhận như công cụ hỗ trợ tìm kiếm/ý tưởng, nhưng nộp bài 100% do AI mà không khai báo bị xem là đạo văn.",
-      "Chọn nhiệm vụ: viết bài luận “Tác động của AI đến hành vi người tiêu dùng 2024 – chiến lược cá nhân hoá”.",
-      "Prompt Gemini với Role + yêu cầu cấu trúc: “Đóng vai chuyên gia Marketing, lập dàn ý chi tiết… tập trung mảng cá nhân hoá trải nghiệm”.",
-      "Nhận dàn ý 5 mục (Giới thiệu – Tự động hoá nội dung – Cá nhân hoá dữ liệu – Thách thức quyền riêng tư – Kết luận); chỉnh sửa, bổ sung ví dụ Nghị định bảo vệ dữ liệu cá nhân tại Việt Nam.",
-      "Trích dẫn minh bạch: “Bài luận có sử dụng Gemini để hỗ trợ xây dựng khung dàn ý ban đầu và gợi ý từ khoá nghiên cứu”.",
-      "Phân tích 3 vấn đề đạo đức: ranh giới hỗ trợ–gian lận, quyền sở hữu trí tuệ & trích dẫn, tác động đến tư duy.",
-      "Đề xuất 6 nguyên tắc cá nhân: Kiểm chứng – Minh bạch – Không thay thế tư duy – Bảo mật dữ liệu – Hiểu “Tại sao” – Cập nhật quy định.",
-      "Thiết kế infographic 4 trụ cột: Khai báo minh bạch – Tư duy phê phán – Sử dụng như công cụ – Tôn trọng đạo đức.",
+      "Nghiên cứu chính sách AI của các trường: AI là công cụ hỗ trợ, nộp bài 100% AI không khai báo = đạo văn.",
+      "Viết bài luận “Tác động của AI đến Marketing” với Gemini (Role + cấu trúc), chỉnh sửa và trích dẫn AI minh bạch.",
+      "Phân tích 3 vấn đề đạo đức: ranh giới hỗ trợ–gian lận, sở hữu trí tuệ, tác động đến tư duy.",
+      "Đề xuất 6 nguyên tắc cá nhân và thiết kế infographic 4 trụ cột “Sử dụng AI có trách nhiệm”.",
     ],
     objectives: [
       "Hiểu chính sách của các trường đại học (Việt Nam và quốc tế) về sử dụng AI trong học thuật.",
