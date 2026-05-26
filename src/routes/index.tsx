@@ -48,11 +48,15 @@ function Portfolio() {
       {/* Nav */}
       <header className="sticky top-0 z-50 backdrop-blur-xl bg-[#0a0f08]/70 border-b border-lime-500/10">
         <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <a href="#top" className="flex items-center gap-3 transition-transform duration-300 hover:scale-105 active:scale-95">
+          <a
+            href="#top"
+            onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}
+            className="flex items-center gap-3 transition-transform duration-300 hover:scale-105 active:scale-95"
+          >
             <img src={uetLogo} alt="UET logo" className="w-10 h-10 rounded-full bg-white p-0.5" />
           </a>
           <ul className="hidden md:flex items-center gap-7 text-sm text-stone-400 font-medium">
-            <li><a onClick={attachRipple} href="#top" className="relative overflow-hidden px-2 py-1 rounded-md hover:text-lime-400 transition-all duration-300 active:scale-95 inline-block">Giới thiệu</a></li>
+            <li><a onClick={(e) => { attachRipple(e); e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }} href="#top" className="relative overflow-hidden px-2 py-1 rounded-md hover:text-lime-400 transition-all duration-300 active:scale-95 inline-block">Giới thiệu</a></li>
             <li><a onClick={attachRipple} href="#projects" className="relative overflow-hidden px-2 py-1 rounded-md hover:text-lime-400 transition-all duration-300 active:scale-95 inline-block">Bài tập</a></li>
             <li><a onClick={attachRipple} href="#skills" className="relative overflow-hidden px-2 py-1 rounded-md hover:text-lime-400 transition-all duration-300 active:scale-95 inline-block">Kỹ năng</a></li>
             <li><a onClick={attachRipple} href="#ethics" className="relative overflow-hidden px-2 py-1 rounded-md hover:text-lime-400 transition-all duration-300 active:scale-95 inline-block">Đạo đức AI</a></li>
@@ -140,8 +144,8 @@ function Portfolio() {
         </div>
       </section>
 
-      <SectionTitle eyebrow="Bài tập học phần" title="Sáu Bài Tập Cốt Lõi" sub="Sáu bài tập nền tảng theo yêu cầu học phần. Nhấn vào mỗi thẻ để xem chi tiết yêu cầu và nội dung trình bày." />
-      <section id="projects" className="max-w-7xl mx-auto px-6 pb-24 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <SectionTitle id="projects" eyebrow="Bài tập học phần" title="Sáu Bài Tập Cốt Lõi" sub="Sáu bài tập nền tảng theo yêu cầu học phần. Nhấn vào mỗi thẻ để xem chi tiết yêu cầu và nội dung trình bày." />
+      <section className="max-w-7xl mx-auto px-6 pb-24 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {exercises.map((p) => (
           <Link
             key={p.n}
@@ -265,7 +269,7 @@ function Portfolio() {
           <div className="md:col-span-2">
             <p className="font-bold text-stone-100 mb-3">Điều hướng</p>
             <ul className="space-y-2 text-sm text-stone-400">
-              <li><a onClick={attachRipple} href="#top" className="relative overflow-hidden inline-block px-1 hover:text-lime-400 transition-all duration-300 active:scale-95">Giới thiệu</a></li>
+              <li><a onClick={(e) => { attachRipple(e); e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }} href="#top" className="relative overflow-hidden inline-block px-1 hover:text-lime-400 transition-all duration-300 active:scale-95">Giới thiệu</a></li>
               <li><a onClick={attachRipple} href="#projects" className="relative overflow-hidden inline-block px-1 hover:text-lime-400 transition-all duration-300 active:scale-95">Bài tập</a></li>
               <li><a onClick={attachRipple} href="#skills" className="relative overflow-hidden inline-block px-1 hover:text-lime-400 transition-all duration-300 active:scale-95">Kỹ năng</a></li>
               <li><a onClick={attachRipple} href="#ethics" className="relative overflow-hidden inline-block px-1 hover:text-lime-400 transition-all duration-300 active:scale-95">Đạo đức AI</a></li>
@@ -304,7 +308,7 @@ function Portfolio() {
 
 function SectionTitle({ id, eyebrow, title, sub }: { id?: string; eyebrow: string; title: string; sub?: string }) {
   return (
-    <div id={id} className="max-w-7xl mx-auto px-6 pt-20 pb-10 text-center">
+    <div id={id} className="scroll-mt-24 max-w-7xl mx-auto px-6 pt-20 pb-10 text-center">
       <p className="text-xs font-bold tracking-[0.3em] uppercase text-lime-400">{eyebrow}</p>
       <h2 className="mt-3 font-[Be_Vietnam_Pro,sans-serif] text-4xl md:text-5xl font-extrabold text-stone-100 tracking-tight">{title}</h2>
       {sub && <p className="mt-4 max-w-2xl mx-auto text-stone-400">{sub}</p>}
