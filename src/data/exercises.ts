@@ -8,6 +8,9 @@ export type Exercise = {
   summary: string;
   requirements: string[];
   process: string[];
+  objectives: string[];
+  achievements: string[];
+  pages: number;
   fileUrl: string;
 };
 
