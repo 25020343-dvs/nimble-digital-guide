@@ -81,13 +81,10 @@ export const exercises: Exercise[] = [
       "Tạo bảng tổng hợp các nguồn thông tin với đánh giá và xếp hạng độ tin cậy.",
     ],
     process: [
-      "Chọn chủ đề: “Tác động của Trí tuệ nhân tạo (AI) đến hiệu quả tự học của sinh viên đại học” — gắn với ngành CNTT và mang tính thời sự.",
-      "Xác định bộ từ khoá song ngữ: “AI in higher education”, “Self-regulated learning and AI”, “Generative AI impact on students”, “Trí tuệ nhân tạo trong tự học”; giới hạn thời gian 2020–2026.",
-      "Tìm kiếm trên Google Scholar, ResearchGate, thư viện số ĐHQGHN; lọc theo tạp chí Q1 như Computers & Education, BJET.",
-      "Thu thập 10 tài liệu: 5 bài báo khoa học (Molenaar 2023, Lodge 2023, Baidoo-Anu 2023, Zawacki-Richter 2019, Yan 2024), 2 sách chuyên khảo (Holmes & Tuomi 2022, Selwyn 2019), 3 báo cáo tổ chức (UNESCO 2023, OECD 2021, Microsoft 2024).",
-      "Đánh giá từng nguồn theo 5 tiêu chí: tác giả – cơ quan xuất bản – phương pháp nghiên cứu – số lượt trích dẫn – tính cập nhật.",
-      "Lập bảng tổng hợp xếp hạng độ tin cậy (Rất cao / Cao / Trung bình – Khá) và rút ra nhận xét: nguồn UNESCO và bài Q1 đáng tin cậy nhất, whitepaper Microsoft cần đối chiếu vì có thiên kiến quảng bá.",
-      "Hoàn thiện danh mục tham khảo theo chuẩn Harvard và viết phần phân tích phương pháp luận.",
+      "Chọn chủ đề “AI tác động đến hiệu quả tự học của sinh viên” và bộ từ khoá song ngữ.",
+      "Tìm kiếm trên Google Scholar, ResearchGate, thư viện ĐHQGHN; lọc theo tạp chí Q1 (Computers & Education, BJET).",
+      "Thu thập 10 nguồn: 5 bài báo Q1, 2 sách chuyên khảo, 3 báo cáo tổ chức (UNESCO, OECD, Microsoft).",
+      "Đánh giá theo 5 tiêu chí, lập bảng xếp hạng độ tin cậy và hoàn thiện trích dẫn theo chuẩn Harvard.",
     ],
     objectives: [
       "Hiểu sự khác biệt giữa nguồn học thuật (peer-reviewed) và nguồn phổ thông; lý do phải ưu tiên CSDL uy tín.",
