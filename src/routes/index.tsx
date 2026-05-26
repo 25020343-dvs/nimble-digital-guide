@@ -269,7 +269,7 @@ function Portfolio() {
           <div className="md:col-span-2">
             <p className="font-bold text-stone-100 mb-3">Điều hướng</p>
             <ul className="space-y-2 text-sm text-stone-400">
-              <li><a onClick={attachRipple} href="#top" className="relative overflow-hidden inline-block px-1 hover:text-lime-400 transition-all duration-300 active:scale-95">Giới thiệu</a></li>
+              <li><a onClick={(e) => { attachRipple(e); e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }} href="#top" className="relative overflow-hidden inline-block px-1 hover:text-lime-400 transition-all duration-300 active:scale-95">Giới thiệu</a></li>
               <li><a onClick={attachRipple} href="#projects" className="relative overflow-hidden inline-block px-1 hover:text-lime-400 transition-all duration-300 active:scale-95">Bài tập</a></li>
               <li><a onClick={attachRipple} href="#skills" className="relative overflow-hidden inline-block px-1 hover:text-lime-400 transition-all duration-300 active:scale-95">Kỹ năng</a></li>
               <li><a onClick={attachRipple} href="#ethics" className="relative overflow-hidden inline-block px-1 hover:text-lime-400 transition-all duration-300 active:scale-95">Đạo đức AI</a></li>
