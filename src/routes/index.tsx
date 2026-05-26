@@ -48,11 +48,15 @@ function Portfolio() {
       {/* Nav */}
       <header className="sticky top-0 z-50 backdrop-blur-xl bg-[#0a0f08]/70 border-b border-lime-500/10">
         <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <a href="#top" className="flex items-center gap-3 transition-transform duration-300 hover:scale-105 active:scale-95">
+          <a
+            href="#top"
+            onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}
+            className="flex items-center gap-3 transition-transform duration-300 hover:scale-105 active:scale-95"
+          >
             <img src={uetLogo} alt="UET logo" className="w-10 h-10 rounded-full bg-white p-0.5" />
           </a>
           <ul className="hidden md:flex items-center gap-7 text-sm text-stone-400 font-medium">
-            <li><a onClick={attachRipple} href="#top" className="relative overflow-hidden px-2 py-1 rounded-md hover:text-lime-400 transition-all duration-300 active:scale-95 inline-block">Giới thiệu</a></li>
+            <li><a onClick={(e) => { attachRipple(e); e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }} href="#top" className="relative overflow-hidden px-2 py-1 rounded-md hover:text-lime-400 transition-all duration-300 active:scale-95 inline-block">Giới thiệu</a></li>
             <li><a onClick={attachRipple} href="#projects" className="relative overflow-hidden px-2 py-1 rounded-md hover:text-lime-400 transition-all duration-300 active:scale-95 inline-block">Bài tập</a></li>
             <li><a onClick={attachRipple} href="#skills" className="relative overflow-hidden px-2 py-1 rounded-md hover:text-lime-400 transition-all duration-300 active:scale-95 inline-block">Kỹ năng</a></li>
             <li><a onClick={attachRipple} href="#ethics" className="relative overflow-hidden px-2 py-1 rounded-md hover:text-lime-400 transition-all duration-300 active:scale-95 inline-block">Đạo đức AI</a></li>
