@@ -121,12 +121,10 @@ export const exercises: Exercise[] = [
       "Tổng hợp các nguyên tắc và mẹo viết prompt hiệu quả dựa trên kết quả thử nghiệm.",
     ],
     process: [
-      "Chọn 3 tác vụ học tập: (a) Tóm tắt tài liệu về Trí tuệ nhân tạo, (b) Giải thích khái niệm Lạm phát, (c) Tạo bộ câu hỏi ôn tập về Triều Nguyễn.",
-      "Với mỗi tác vụ, soạn 3 phiên bản prompt: Cơ bản (ngắn, ít ràng buộc) – Cải tiến (định dạng + giới hạn độ dài) – Nâng cao (Role + Chain-of-Thought + yêu cầu bảng).",
-      "Chạy thử trên ChatGPT, lưu lại screenshot toàn bộ kết quả đầu ra để có bằng chứng đối sánh.",
-      "Lập bảng so sánh chất lượng đầu ra theo 3 tiêu chí: Chất lượng – Độ chính xác/Chi tiết – Tính ứng dụng.",
-      "Phân tích lý do prompt nâng cao thắng: cung cấp ngữ cảnh (Role), ràng buộc định dạng, hướng dẫn suy nghĩ từng bước (CoT), ví dụ mẫu (Few-shot).",
-      "Đúc kết 4 nguyên tắc cá nhân: (1) Rõ ràng – động từ mệnh lệnh, (2) Cung cấp bối cảnh/vai trò, (3) Quy định cấu trúc đầu ra, (4) Lặp – tinh chỉnh nhiều vòng.",
+      "Chọn 3 tác vụ: tóm tắt tài liệu AI, giải thích Lạm phát, tạo câu hỏi ôn tập Triều Nguyễn.",
+      "Với mỗi tác vụ, soạn 3 phiên bản prompt: Cơ bản – Cải tiến – Nâng cao (Role + CoT + Few-shot).",
+      "Chạy thử trên ChatGPT, lưu screenshot và lập bảng so sánh theo Chất lượng – Chính xác – Ứng dụng.",
+      "Đúc kết 4 nguyên tắc: rõ ràng, cung cấp vai trò/bối cảnh, quy định cấu trúc đầu ra, lặp – tinh chỉnh.",
     ],
     objectives: [
       "Hiểu khái niệm Prompt Engineering và vì sao cùng một mô hình lại cho chất lượng đầu ra khác nhau.",
