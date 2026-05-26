@@ -140,8 +140,8 @@ function Portfolio() {
         </div>
       </section>
 
-      <SectionTitle eyebrow="Bài tập học phần" title="Sáu Bài Tập Cốt Lõi" sub="Sáu bài tập nền tảng theo yêu cầu học phần. Nhấn vào mỗi thẻ để xem chi tiết yêu cầu và nội dung trình bày." />
-      <section id="projects" className="max-w-7xl mx-auto px-6 pb-24 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <SectionTitle id="projects" eyebrow="Bài tập học phần" title="Sáu Bài Tập Cốt Lõi" sub="Sáu bài tập nền tảng theo yêu cầu học phần. Nhấn vào mỗi thẻ để xem chi tiết yêu cầu và nội dung trình bày." />
+      <section className="max-w-7xl mx-auto px-6 pb-24 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {exercises.map((p) => (
           <Link
             key={p.n}
