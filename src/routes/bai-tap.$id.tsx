@@ -112,18 +112,6 @@ function BaiTapPage() {
         </div>
       </section>
 
-      {/* Yêu cầu */}
-      <section className="max-w-5xl mx-auto px-6 pb-10">
-        <div className="p-7 rounded-2xl bg-[#0f160c] border border-[#1e3319]">
-          <h2 className="font-[Be_Vietnam_Pro,sans-serif] font-bold text-lime-400 text-lg">📋 Yêu cầu bài tập</h2>
-          <ol className="mt-4 space-y-3 text-[15px] text-stone-300 leading-relaxed list-decimal list-inside marker:text-lime-400 marker:font-bold">
-            {ex.requirements.map((r, i) => (
-              <li key={i}>{r}</li>
-            ))}
-          </ol>
-        </div>
-      </section>
-
       {/* Tải bài tập đầy đủ — đặt ngay trên phần tóm tắt */}
       <section className="max-w-5xl mx-auto px-6 pb-10">
         <div className="p-6 rounded-2xl bg-gradient-to-br from-[#121a0f] to-[#0a0f08] border border-dashed border-[#2a4422] flex items-center justify-between gap-4 flex-wrap">
@@ -186,7 +174,7 @@ function BaiTapPage() {
             <h2 className="font-[Be_Vietnam_Pro,sans-serif] font-bold text-lime-400 text-lg">📑 Toàn bộ trang bài tập</h2>
             <p className="text-xs text-stone-500">{ex.pages} trang · click để xem ảnh gốc</p>
           </div>
-          <div className="mt-5 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="mt-5 flex flex-col gap-5 max-w-3xl mx-auto">
             {Array.from({ length: ex.pages }, (_, i) => i + 1).map((p) => {
               const src = `/bai-tap/bai-${ex.id}/page-${p}.jpg`;
               return (
