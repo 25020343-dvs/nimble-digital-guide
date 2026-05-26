@@ -163,13 +163,10 @@ export const exercises: Exercise[] = [
       "— Tổ chức và lưu trữ các tệp tin cá nhân phụ trách một cách khoa học.",
     ],
     process: [
-      "Chọn 4 công cụ đại diện 4 nhóm chức năng: Trello (quản lý), Google Docs (soạn thảo), Google Drive (lưu trữ), Discord (giao tiếp).",
-      "Trên Trello: tạo board với các cột Cần làm – Đang làm – Chờ review – Đã xong; nhận 3 thẻ cá nhân (thiết kế khảo sát, kịch bản thuyết trình, dựng video) và cập nhật tiến độ hằng ngày.",
-      "Trên Google Docs: đồng soạn “Kịch bản bài quay video công nghệ số”, dùng chế độ Suggesting và Version History để theo dõi đóng góp.",
-      "Trên Google Drive: tổ chức thư mục Học kỳ 2_2025-2026 → Công nghệ số → các thư mục con cho từng tài liệu nhóm.",
-      "Trên Discord: thảo luận nhóm về lợi ích/thách thức của AI trong học tập, chia sẻ màn hình khi họp 1-1.",
-      "Ghi lại 3 thách thức gặp phải (xung đột phiên bản, quản lý deadline, mất tập trung khi họp) và giải pháp tương ứng.",
-      "Tổng kết bài học: minh bạch tiến độ, tiết kiệm thời gian và phát triển kỹ năng làm việc nhóm trong môi trường số.",
+      "Chọn 4 công cụ đại diện: Trello, Google Docs, Google Drive, Discord.",
+      "Trên Trello nhận 3 thẻ cá nhân theo cột Cần làm – Đang làm – Chờ review – Đã xong và cập nhật mỗi ngày.",
+      "Đồng soạn kịch bản trên Google Docs (Suggesting + Version History); tổ chức Drive theo Học kỳ → Môn → Tài liệu.",
+      "Ghi lại 3 thách thức (xung đột phiên bản, deadline, mất tập trung) và giải pháp tương ứng.",
     ],
     objectives: [
       "Hiểu vai trò của công cụ hợp tác trực tuyến trong dự án nhóm thời 4.0.",
