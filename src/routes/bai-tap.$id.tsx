@@ -32,9 +32,6 @@ export const Route = createFileRoute("/bai-tap/$id")({
 
 function BaiTapPage() {
   const ex = Route.useLoaderData() as Exercise;
-  const idx = exercises.findIndex((e) => e.id === ex.id);
-  const prev = exercises[idx - 1];
-  const next = exercises[idx + 1];
 
   const navItems = [
     { hash: "top", label: "Giới thiệu" },
