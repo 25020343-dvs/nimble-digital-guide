@@ -32,9 +32,6 @@ export const Route = createFileRoute("/bai-tap/$id")({
 
 function BaiTapPage() {
   const ex = Route.useLoaderData() as Exercise;
-  const idx = exercises.findIndex((e) => e.id === ex.id);
-  const prev = exercises[idx - 1];
-  const next = exercises[idx + 1];
 
   const navItems = [
     { hash: "top", label: "Giới thiệu" },
@@ -96,8 +93,44 @@ function BaiTapPage() {
         </div>
       </section>
 
-      {/* Mục tiêu bài học chi tiết */}
-      <section className="max-w-5xl mx-auto px-6 pb-10">
+      {/* Layout 2 cột: sidebar điều hướng + nội dung */}
+      <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-[240px_1fr] gap-8 pb-10">
+        {/* Sidebar trái */}
+        <aside className="lg:sticky lg:top-24 lg:self-start">
+          <div className="p-4 rounded-2xl bg-[#0f160c] border border-[#1e3319]">
+            <p className="px-2 pb-3 text-[11px] uppercase tracking-[0.25em] text-lime-400 font-bold">🧭 Danh sách bài tập</p>
+            <ul className="flex lg:flex-col gap-2 overflow-x-auto lg:overflow-visible">
+              {exercises.map((e) => {
+                const active = e.id === ex.id;
+                return (
+                  <li key={e.id} className="shrink-0 lg:shrink">
+                    <Link
+                      to="/bai-tap/$id"
+                      params={{ id: e.id }}
+                      onClick={attachRipple}
+                      aria-current={active ? "page" : undefined}
+                      className={`flex items-center gap-3 px-3 py-2.5 rounded-xl border text-[13.5px] font-semibold transition-all duration-300 active:scale-95 ${
+                        active
+                          ? "bg-lime-500/10 border-lime-500/50 text-lime-300"
+                          : "bg-[#0a0f08] border-[#1e3319] text-stone-300 hover:border-lime-500/40 hover:text-lime-300"
+                      }`}
+                    >
+                      <span className="text-lg leading-none">{e.icon}</span>
+                      <span className="flex flex-col leading-tight">
+                        <span className={`text-[10px] tracking-widest ${active ? "text-lime-400" : "text-stone-500"}`}>BÀI {e.n}</span>
+                        <span className="line-clamp-1">{e.shortTitle}</span>
+                      </span>
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        </aside>
+
+        {/* Nội dung phải */}
+        <div className="space-y-10 min-w-0">
+        {/* Mục tiêu bài học chi tiết */}
         <div className="p-7 rounded-2xl bg-[#0f160c] border border-[#1e3319]">
           <h2 className="font-[Be_Vietnam_Pro,sans-serif] font-bold text-lime-400 text-lg">🎯 Mục tiêu bài học chi tiết</h2>
           <ul className="mt-5 grid md:grid-cols-2 gap-3 text-[15px] text-stone-300 leading-relaxed">
@@ -109,10 +142,8 @@ function BaiTapPage() {
             ))}
           </ul>
         </div>
-      </section>
 
-      {/* Tải bài tập đầy đủ — đặt ngay trên phần tóm tắt */}
-      <section className="max-w-5xl mx-auto px-6 pb-10">
+        {/* Tải bài tập đầy đủ */}
         <div className="p-6 rounded-2xl bg-gradient-to-br from-[#121a0f] to-[#0a0f08] border border-dashed border-[#2a4422] flex items-center justify-between gap-4 flex-wrap">
           <div>
             <p className="text-xs uppercase tracking-[0.25em] text-lime-400 font-bold">Tài liệu gốc</p>
@@ -129,9 +160,7 @@ function BaiTapPage() {
             📄 Tải bài tập đầy đủ (.docx)
           </a>
         </div>
-      </section>
 
-      <section className="max-w-5xl mx-auto px-6 pb-10">
         <div className="p-7 rounded-2xl bg-[#0f160c] border border-[#1e3319]">
           <h2 className="font-[Be_Vietnam_Pro,sans-serif] font-bold text-lime-400 text-lg">🛠️ Tóm tắt quá trình thực hiện</h2>
           <ol className="mt-5 space-y-4">
@@ -145,10 +174,8 @@ function BaiTapPage() {
             ))}
           </ol>
         </div>
-      </section>
 
-      {/* Những gì đạt được */}
-      <section className="max-w-5xl mx-auto px-6 pb-10">
+        {/* Những gì đạt được */}
         <div className="p-7 rounded-2xl bg-gradient-to-br from-[#101a0a] to-[#0a0f08] border border-lime-500/30">
           <h2 className="font-[Be_Vietnam_Pro,sans-serif] font-bold text-xl bg-gradient-to-r from-lime-300 to-yellow-300 bg-clip-text text-transparent">
             🏆 Những gì đạt được sau bài tập
@@ -164,10 +191,8 @@ function BaiTapPage() {
             ))}
           </ul>
         </div>
-      </section>
 
-      {/* Toàn bộ trang bài tập */}
-      <section className="max-w-5xl mx-auto px-6 pb-16">
+        {/* Toàn bộ trang bài tập */}
         <div className="p-7 rounded-2xl bg-[#0f160c] border border-[#1e3319]">
           <div className="flex items-baseline justify-between flex-wrap gap-2">
             <h2 className="font-[Be_Vietnam_Pro,sans-serif] font-bold text-lime-400 text-lg">📑 Toàn bộ trang bài tập</h2>
@@ -199,72 +224,8 @@ function BaiTapPage() {
             })}
           </div>
         </div>
-      </section>
-
-      {/* Điều hướng tới các bài tập khác */}
-      <section className="max-w-5xl mx-auto px-6 pb-10">
-        <div className="p-7 rounded-2xl bg-[#0f160c] border border-[#1e3319]">
-          <div className="flex items-baseline justify-between flex-wrap gap-2">
-            <h2 className="font-[Be_Vietnam_Pro,sans-serif] font-bold text-lime-400 text-lg">🧭 Khám phá các bài tập khác</h2>
-            <p className="text-xs text-stone-500">{exercises.length} bài tập trong học phần</p>
-          </div>
-          <div className="mt-5 grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
-            {exercises.map((e) => {
-              const active = e.id === ex.id;
-              return (
-                <Link
-                  key={e.id}
-                  to="/bai-tap/$id"
-                  params={{ id: e.id }}
-                  onClick={attachRipple}
-                  aria-current={active ? "page" : undefined}
-                  className={`group p-4 rounded-xl border transition-all duration-300 hover:scale-[1.02] active:scale-95 ${
-                    active
-                      ? "bg-lime-500/10 border-lime-500/50"
-                      : "bg-[#0a0f08] border-[#1e3319] hover:border-lime-500/40"
-                  }`}
-                >
-                  <div className="flex items-center justify-between">
-                    <span className="text-xl">{e.icon}</span>
-                    <span className={`text-[10px] font-bold tracking-widest ${active ? "text-lime-300" : "text-stone-500"}`}>BÀI {e.n}</span>
-                  </div>
-                  <p className="mt-2 font-[Be_Vietnam_Pro,sans-serif] font-bold text-stone-100 text-[14px] leading-snug line-clamp-2">
-                    {e.shortTitle}
-                  </p>
-                  <p className={`mt-2 text-[12px] font-semibold ${active ? "text-lime-300" : "text-lime-400 group-hover:text-lime-300"}`}>
-                    {active ? "Đang xem →" : "Xem bài tập →"}
-                  </p>
-                </Link>
-              );
-            })}
-          </div>
         </div>
-      </section>
-
-      <nav className="max-w-5xl mx-auto px-6 pb-20 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4">
-        {prev ? (
-          <Link
-            to="/bai-tap/$id"
-            params={{ id: prev.id }}
-            onClick={attachRipple}
-            className="flex-1 p-4 rounded-xl bg-[#0f160c] border border-[#1e3319] hover:border-lime-500/50 transition-all duration-300 hover:scale-[1.02] active:scale-95"
-          >
-            <p className="text-xs uppercase tracking-widest text-stone-500">← Bài trước</p>
-            <p className="mt-1 font-bold text-stone-100">{prev.icon} {prev.shortTitle}</p>
-          </Link>
-        ) : <div className="flex-1" />}
-        {next ? (
-          <Link
-            to="/bai-tap/$id"
-            params={{ id: next.id }}
-            onClick={attachRipple}
-            className="flex-1 p-4 rounded-xl bg-[#0f160c] border border-[#1e3319] hover:border-lime-500/50 transition-all duration-300 hover:scale-[1.02] active:scale-95 text-right"
-          >
-            <p className="text-xs uppercase tracking-widest text-stone-500">Bài tiếp →</p>
-            <p className="mt-1 font-bold text-stone-100">{next.icon} {next.shortTitle}</p>
-          </Link>
-        ) : <div className="flex-1" />}
-      </nav>
+      </div>
 
       <footer className="border-t border-[#1e3319] bg-[#080c06]">
         <div className="max-w-7xl mx-auto px-6 py-8 text-center text-xs text-stone-500">

@@ -82,7 +82,7 @@ function Portfolio() {
               📚 Nhập môn Công nghệ Số và Ứng dụng Trí tuệ Nhân tạo
             </span>
             <h1 className="mt-6 font-[Be_Vietnam_Pro,sans-serif] text-5xl md:text-7xl font-extrabold leading-[1.05] tracking-tight text-stone-100">
-              <span className="font-[Playfair_Display,serif] italic font-bold bg-gradient-to-r from-lime-300 via-lime-400 to-emerald-400 bg-clip-text text-transparent">
+              <span className="font-[Be_Vietnam_Pro,sans-serif] italic font-extrabold bg-gradient-to-r from-lime-300 via-lime-400 to-emerald-400 bg-clip-text text-transparent">
                 {NAME}
               </span>
             </h1>
@@ -143,7 +143,7 @@ function Portfolio() {
         </div>
       </section>
 
-      <SectionTitle id="projects" eyebrow="Bài tập học phần" title="Sáu Bài Tập Cốt Lõi" sub="Sáu bài tập nền tảng theo yêu cầu học phần. Nhấn vào mỗi thẻ để xem chi tiết yêu cầu và nội dung trình bày." />
+      <SectionTitle id="projects" eyebrow="Bài tập học phần" title="Bài Tập" sub="Sáu bài tập nền tảng theo yêu cầu học phần. Nhấn vào mỗi thẻ để xem chi tiết yêu cầu và nội dung trình bày." />
       <section className="max-w-7xl mx-auto px-6 pb-24 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {exercises.map((p) => (
           <Link
@@ -178,7 +178,7 @@ function Portfolio() {
         ))}
       </section>
 
-      <SectionTitle id="skills" eyebrow="Năng lực số" title="Kỹ Năng Số Đã Đạt Được" sub="Bản đồ tự đánh giá các năng lực số được phát triển trong suốt học kỳ. Con số % thể hiện mức độ thành thạo cá nhân." />
+      <SectionTitle id="skills" eyebrow="Năng lực số" title="Các Kỹ Năng Đạt Được" sub="Bản đồ tự đánh giá các năng lực số được phát triển trong suốt học kỳ. Con số % thể hiện mức độ thành thạo cá nhân." />
       <section className="max-w-7xl mx-auto px-6 pb-16 grid md:grid-cols-2 gap-5">
         {skills.map(s => (
           <div key={s.name} className="p-5 rounded-2xl bg-[#0f160c] border border-[#1e3319]">
@@ -204,7 +204,7 @@ function Portfolio() {
         ))}
       </div>
 
-      <SectionTitle id="ethics" eyebrow="AI & Đạo đức" title="Quy Tắc Đạo Đức AI Cá Nhân" sub="Năm nguyên tắc cá nhân tôi cam kết thực hiện khi tích hợp công cụ AI vào học tập và nghiên cứu." />
+      <SectionTitle id="ethics" eyebrow="AI & Đạo đức" title="Nguyên Tắc Sử Dụng AI" sub="Năm nguyên tắc cá nhân tôi cam kết thực hiện khi tích hợp công cụ AI vào học tập và nghiên cứu." />
       <section className="max-w-7xl mx-auto px-6 pb-24 grid md:grid-cols-2 lg:grid-cols-3 gap-5">
         {ethics.map(e => (
           <div key={e.title} className="p-6 rounded-2xl bg-[#0f160c] border border-[#1e3319]">
@@ -214,7 +214,7 @@ function Portfolio() {
           </div>
         ))}
         <div className="md:col-span-2 lg:col-span-3 p-8 rounded-2xl bg-gradient-to-br from-lime-500/10 to-emerald-500/5 border border-lime-500/30">
-          <p className="font-[Playfair_Display,serif] italic text-2xl md:text-3xl text-stone-100 leading-snug">
+          <p className="font-[Be_Vietnam_Pro,sans-serif] italic font-medium text-2xl md:text-3xl text-stone-100 leading-snug">
             “Rủi ro thực sự của AI không phải là nó sẽ suy nghĩ thay chúng ta — mà là chúng ta sẽ ngừng tự suy nghĩ.”
           </p>
           <p className="mt-3 text-sm text-lime-400 font-bold tracking-wide">— Suy ngẫm cá nhân, 2025</p>
@@ -223,7 +223,7 @@ function Portfolio() {
 
       <SectionTitle id="reflection" eyebrow="Tổng kết học kỳ" title="Suy Ngẫm Cá Nhân" />
       <section className="max-w-5xl mx-auto px-6 pb-24">
-        <blockquote className="p-8 rounded-2xl bg-[#0f160c] border-l-4 border-lime-500 font-[Playfair_Display,serif] italic text-xl md:text-2xl text-stone-100 leading-relaxed">
+        <blockquote className="p-8 rounded-2xl bg-[#0f160c] border-l-4 border-lime-500 font-[Be_Vietnam_Pro,sans-serif] italic font-medium text-xl md:text-2xl text-stone-100 leading-relaxed">
           “Khóa học này không chỉ dạy tôi cách dùng công nghệ — nó dạy tôi cách suy nghĩ cùng với công nghệ.”
         </blockquote>
 
@@ -294,10 +294,13 @@ function Portfolio() {
           </div>
           <div className="md:col-span-3">
             <p className="font-bold text-stone-100 mb-3">Liên Hệ</p>
-            <p className="text-sm text-stone-400">
-              ✉ <a href={`mailto:${EMAIL}`} className="hover:text-lime-400 font-semibold break-all">{EMAIL}</a>
-            </p>
-            <p className="mt-2 text-sm text-stone-400">🪪 MSV: 25020343</p>
+            <ul className="space-y-2 text-sm text-stone-400">
+              <li>🏫 Trường <span className="text-stone-200 font-semibold">Đại học Công nghệ — ĐHQGHN</span></li>
+              <li>🎓 Ngành <span className="text-stone-200 font-semibold">CNTT — K70 — IT5</span></li>
+              <li>📋 Mã lớp <span className="text-stone-200 font-semibold">VNU1001_E252016</span></li>
+              <li>🪪 MSV <span className="text-stone-200 font-semibold">25020343</span></li>
+              <li className="break-all">✉ <a href={`mailto:${EMAIL}`} className="hover:text-lime-400 font-semibold">{EMAIL}</a></li>
+            </ul>
           </div>
         </div>
       </footer>
