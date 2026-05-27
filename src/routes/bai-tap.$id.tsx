@@ -201,6 +201,46 @@ function BaiTapPage() {
         </div>
       </section>
 
+      {/* Điều hướng tới các bài tập khác */}
+      <section className="max-w-5xl mx-auto px-6 pb-10">
+        <div className="p-7 rounded-2xl bg-[#0f160c] border border-[#1e3319]">
+          <div className="flex items-baseline justify-between flex-wrap gap-2">
+            <h2 className="font-[Be_Vietnam_Pro,sans-serif] font-bold text-lime-400 text-lg">🧭 Khám phá các bài tập khác</h2>
+            <p className="text-xs text-stone-500">{exercises.length} bài tập trong học phần</p>
+          </div>
+          <div className="mt-5 grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            {exercises.map((e) => {
+              const active = e.id === ex.id;
+              return (
+                <Link
+                  key={e.id}
+                  to="/bai-tap/$id"
+                  params={{ id: e.id }}
+                  onClick={attachRipple}
+                  aria-current={active ? "page" : undefined}
+                  className={`group p-4 rounded-xl border transition-all duration-300 hover:scale-[1.02] active:scale-95 ${
+                    active
+                      ? "bg-lime-500/10 border-lime-500/50"
+                      : "bg-[#0a0f08] border-[#1e3319] hover:border-lime-500/40"
+                  }`}
+                >
+                  <div className="flex items-center justify-between">
+                    <span className="text-xl">{e.icon}</span>
+                    <span className={`text-[10px] font-bold tracking-widest ${active ? "text-lime-300" : "text-stone-500"}`}>BÀI {e.n}</span>
+                  </div>
+                  <p className="mt-2 font-[Be_Vietnam_Pro,sans-serif] font-bold text-stone-100 text-[14px] leading-snug line-clamp-2">
+                    {e.shortTitle}
+                  </p>
+                  <p className={`mt-2 text-[12px] font-semibold ${active ? "text-lime-300" : "text-lime-400 group-hover:text-lime-300"}`}>
+                    {active ? "Đang xem →" : "Xem bài tập →"}
+                  </p>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
       <nav className="max-w-5xl mx-auto px-6 pb-20 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4">
         {prev ? (
           <Link
