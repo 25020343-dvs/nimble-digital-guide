@@ -1,7 +1,7 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { exercises, getExercise, type Exercise } from "@/data/exercises";
 import uetLogo from "@/assets/uet-logo.png";
-import { SmoothCursor, attachRipple } from "@/components/SmoothCursor";
+import { attachRipple } from "@/components/SmoothCursor";
 
 export const Route = createFileRoute("/bai-tap/$id")({
   component: BaiTapPage,
@@ -45,8 +45,7 @@ function BaiTapPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#0a0f08] text-stone-200 font-[Nunito,sans-serif] selection:bg-lime-500/30">
-      <SmoothCursor />
+    <div className="min-h-screen bg-[#0a0f08] text-stone-200 font-[Inter,sans-serif] selection:bg-lime-500/30">
       <header className="sticky top-0 z-50 backdrop-blur-xl bg-[#0a0f08]/70 border-b border-lime-500/10">
         <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between gap-4">
           <Link to="/" onClick={attachRipple} className="flex items-center gap-3 transition-transform duration-300 hover:scale-105 active:scale-95 shrink-0">
