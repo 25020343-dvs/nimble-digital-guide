@@ -1,7 +1,7 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { exercises, getExercise, type Exercise } from "@/data/exercises";
 import uetLogo from "@/assets/uet-logo.png";
-import { SmoothCursor, attachRipple } from "@/components/SmoothCursor";
+import { attachRipple } from "@/components/SmoothCursor";
 
 export const Route = createFileRoute("/bai-tap/$id")({
   component: BaiTapPage,
@@ -45,8 +45,7 @@ function BaiTapPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#0a0f08] text-stone-200 font-[Nunito,sans-serif] selection:bg-lime-500/30">
-      <SmoothCursor />
+    <div className="min-h-screen bg-[#0a0f08] text-stone-200 font-[Inter,sans-serif] selection:bg-lime-500/30">
       <header className="sticky top-0 z-50 backdrop-blur-xl bg-[#0a0f08]/70 border-b border-lime-500/10">
         <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between gap-4">
           <Link to="/" onClick={attachRipple} className="flex items-center gap-3 transition-transform duration-300 hover:scale-105 active:scale-95 shrink-0">
@@ -196,6 +195,46 @@ function BaiTapPage() {
                     Trang {p}
                   </span>
                 </a>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Điều hướng tới các bài tập khác */}
+      <section className="max-w-5xl mx-auto px-6 pb-10">
+        <div className="p-7 rounded-2xl bg-[#0f160c] border border-[#1e3319]">
+          <div className="flex items-baseline justify-between flex-wrap gap-2">
+            <h2 className="font-[Be_Vietnam_Pro,sans-serif] font-bold text-lime-400 text-lg">🧭 Khám phá các bài tập khác</h2>
+            <p className="text-xs text-stone-500">{exercises.length} bài tập trong học phần</p>
+          </div>
+          <div className="mt-5 grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            {exercises.map((e) => {
+              const active = e.id === ex.id;
+              return (
+                <Link
+                  key={e.id}
+                  to="/bai-tap/$id"
+                  params={{ id: e.id }}
+                  onClick={attachRipple}
+                  aria-current={active ? "page" : undefined}
+                  className={`group p-4 rounded-xl border transition-all duration-300 hover:scale-[1.02] active:scale-95 ${
+                    active
+                      ? "bg-lime-500/10 border-lime-500/50"
+                      : "bg-[#0a0f08] border-[#1e3319] hover:border-lime-500/40"
+                  }`}
+                >
+                  <div className="flex items-center justify-between">
+                    <span className="text-xl">{e.icon}</span>
+                    <span className={`text-[10px] font-bold tracking-widest ${active ? "text-lime-300" : "text-stone-500"}`}>BÀI {e.n}</span>
+                  </div>
+                  <p className="mt-2 font-[Be_Vietnam_Pro,sans-serif] font-bold text-stone-100 text-[14px] leading-snug line-clamp-2">
+                    {e.shortTitle}
+                  </p>
+                  <p className={`mt-2 text-[12px] font-semibold ${active ? "text-lime-300" : "text-lime-400 group-hover:text-lime-300"}`}>
+                    {active ? "Đang xem →" : "Xem bài tập →"}
+                  </p>
+                </Link>
               );
             })}
           </div>

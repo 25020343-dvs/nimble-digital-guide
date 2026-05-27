@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import uetLogo from "@/assets/uet-logo.png";
-import { SmoothCursor, attachRipple } from "@/components/SmoothCursor";
+import { attachRipple } from "@/components/SmoothCursor";
 import { exercises } from "@/data/exercises";
 
 export const Route = createFileRoute("/")({
@@ -43,8 +43,7 @@ const ethics = [
 
 function Portfolio() {
   return (
-    <div className="min-h-screen bg-[#0a0f08] text-stone-200 font-[Nunito,sans-serif] selection:bg-lime-500/30">
-      <SmoothCursor />
+    <div className="min-h-screen bg-[#0a0f08] text-stone-200 font-[Inter,sans-serif] selection:bg-lime-500/30">
       {/* Nav */}
       <header className="sticky top-0 z-50 backdrop-blur-xl bg-[#0a0f08]/70 border-b border-lime-500/10">
         <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -87,21 +86,21 @@ function Portfolio() {
                 {NAME}
               </span>
             </h1>
-            <ul className="mt-8 flex flex-wrap gap-3 text-sm text-white">
-              <li className="px-3 py-1.5 rounded-lg bg-[#121a0f] border border-[#1e3319] transition-all duration-300 hover:scale-[1.03] hover:border-lime-500/50 active:scale-95">
-                🏫 Trường <span className="bg-gradient-to-r from-lime-300 to-yellow-300 bg-clip-text text-transparent font-bold">Đại học Công Nghệ - Đại học Quốc gia Hà Nội</span>
+            <ul className="mt-8 flex flex-wrap gap-2.5 text-[13px] text-stone-200">
+              <li className="px-3 py-1.5 rounded-lg bg-[#121a0f] border border-[#1e3319] transition-all duration-300 hover:scale-[1.03] hover:border-lime-500/50 active:scale-95 font-medium">
+                🏫 Trường <span className="text-lime-300 font-semibold">Đại học Công Nghệ — ĐHQG Hà Nội</span>
               </li>
-              <li className="px-3 py-1.5 rounded-lg bg-[#121a0f] border border-[#1e3319] transition-all duration-300 hover:scale-[1.03] hover:border-lime-500/50 active:scale-95">
-                🎓 Ngành <span className="bg-gradient-to-r from-lime-300 to-yellow-300 bg-clip-text text-transparent font-bold">Công nghệ Thông tin</span>
+              <li className="px-3 py-1.5 rounded-lg bg-[#121a0f] border border-[#1e3319] transition-all duration-300 hover:scale-[1.03] hover:border-lime-500/50 active:scale-95 font-medium">
+                🎓 Ngành <span className="text-lime-300 font-semibold">Công nghệ Thông tin</span>
               </li>
-              <li className="px-3 py-1.5 rounded-lg bg-[#121a0f] border border-[#1e3319] transition-all duration-300 hover:scale-[1.03] hover:border-lime-500/50 active:scale-95">
-                📅 Khoá <span className="bg-gradient-to-r from-lime-300 to-yellow-300 bg-clip-text text-transparent font-bold">K70</span>
+              <li className="px-3 py-1.5 rounded-lg bg-[#121a0f] border border-[#1e3319] transition-all duration-300 hover:scale-[1.03] hover:border-lime-500/50 active:scale-95 font-medium">
+                📅 Khoá <span className="text-lime-300 font-semibold">K70</span>
               </li>
-              <li className="px-3 py-1.5 rounded-lg bg-[#121a0f] border border-[#1e3319] transition-all duration-300 hover:scale-[1.03] hover:border-lime-500/50 active:scale-95">
-                🪪 Mã sinh viên <span className="bg-gradient-to-r from-lime-300 to-yellow-300 bg-clip-text text-transparent font-bold">25020343</span>
+              <li className="px-3 py-1.5 rounded-lg bg-[#121a0f] border border-[#1e3319] transition-all duration-300 hover:scale-[1.03] hover:border-lime-500/50 active:scale-95 font-medium">
+                🪪 Mã sinh viên <span className="text-lime-300 font-semibold">25020343</span>
               </li>
-              <li className="px-3 py-1.5 rounded-lg bg-[#121a0f] border border-[#1e3319] transition-all duration-300 hover:scale-[1.03] hover:border-lime-500/50 active:scale-95">
-                📋 Mã lớp học <span className="bg-gradient-to-r from-lime-300 to-yellow-300 bg-clip-text text-transparent font-bold">VNU1001_E252016</span>
+              <li className="px-3 py-1.5 rounded-lg bg-[#121a0f] border border-[#1e3319] transition-all duration-300 hover:scale-[1.03] hover:border-lime-500/50 active:scale-95 font-medium">
+                📋 Mã lớp <span className="text-lime-300 font-semibold">VNU1001_E252016</span>
               </li>
             </ul>
             <p className="mt-8 max-w-2xl text-lg text-stone-400 leading-relaxed">
@@ -158,19 +157,19 @@ function Portfolio() {
               <span className="text-3xl leading-none">{p.icon}</span>
               <span className="text-xs font-bold tracking-widest text-lime-500/70">{p.n}</span>
             </div>
-            <div className="mt-5 min-h-[88px]">
-              <p className="text-xs uppercase tracking-widest text-stone-500">Bài tập {p.n}</p>
-              <h3 className="mt-1 font-[Be_Vietnam_Pro,sans-serif] font-bold text-stone-100 text-[17px] leading-[1.35]">
-                {p.title.replace(/^Bài \d+\s*—\s*/, "")}
+            <div className="mt-5 min-h-[76px]">
+              <p className="text-[11px] uppercase tracking-widest text-stone-500 font-semibold">Bài tập {p.n}</p>
+              <h3 className="mt-1 font-[Be_Vietnam_Pro,sans-serif] font-bold text-stone-100 text-[16px] leading-[1.35] line-clamp-2">
+                {p.shortTitle}
               </h3>
             </div>
-            <div className="mt-4">
+            <div className="mt-3">
               <p className="text-[11px] uppercase tracking-widest text-lime-400 font-bold">Mục tiêu</p>
-              <p className="mt-1.5 text-sm text-stone-400 leading-relaxed line-clamp-4">{p.goal}</p>
+              <p className="mt-1 text-[13.5px] text-stone-400 leading-relaxed line-clamp-2">{p.goal}</p>
             </div>
-            <div className="mt-4">
-              <p className="text-[11px] uppercase tracking-widest text-lime-400 font-bold">Định hướng trình bày</p>
-              <p className="mt-1.5 text-sm text-stone-400 leading-relaxed line-clamp-3">{p.summary}</p>
+            <div className="mt-3">
+              <p className="text-[11px] uppercase tracking-widest text-lime-400 font-bold">Định hướng</p>
+              <p className="mt-1 text-[13.5px] text-stone-400 leading-relaxed line-clamp-2">{p.summary}</p>
             </div>
             <span className="mt-5 inline-block text-sm font-bold text-lime-400 group-hover:text-lime-300 group-hover:translate-x-1 transition-transform">
               Xem Bài tập →
