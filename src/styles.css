@@ -188,16 +188,23 @@ html { scroll-behavior: smooth; }
   animation: ripple-anim 0.6s ease-out forwards;
 }
 
-@keyframes press-pop {
-  0%   { transform: scale(1); }
-  40%  { transform: scale(0.94); }
-  100% { transform: scale(1); }
+/* Press feedback: flash border/background without overriding the JS translate transform */
+.smooth-cursor-ring.press-pop {
+  border-color: rgba(163, 230, 53, 1) !important;
+  background: rgba(163, 230, 53, 0.25);
+  box-shadow: 0 0 22px rgba(163, 230, 53, 0.55);
+  transition: border-color .15s ease, background-color .15s ease, box-shadow .15s ease;
 }
-.press-pop { animation: press-pop 0.35s ease-out; }
 
 @keyframes fadeSlideIn {
   0%   { opacity: 0; transform: translateY(14px); }
   100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes bounceIn {
+  0%   { opacity: 0; transform: translateY(40px) scale(0.92); }
+  55%  { opacity: 1; transform: translateY(-10px) scale(1.02); }
+  75%  { transform: translateY(4px) scale(0.99); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
 }
 @keyframes fadeIn {
   0%   { opacity: 0; }
