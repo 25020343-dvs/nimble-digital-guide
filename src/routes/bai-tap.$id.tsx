@@ -97,30 +97,14 @@ function BaiTapPage() {
         </nav>
       </header>
 
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 -z-10 opacity-40">
-          <div className="absolute top-1/4 -left-32 w-96 h-96 rounded-full bg-lime-500/20 blur-[120px]" />
+      {/* Layout: sidebar sát mép trái (bắt đầu từ trên) + hero & nội dung bên phải */}
+      <div className="grid lg:grid-cols-[240px_minmax(0,1fr)] gap-6 lg:gap-8 pt-6 pb-10 pr-4 lg:pr-8 relative">
+        <div className="absolute inset-0 -z-10 opacity-40 pointer-events-none">
+          <div className="absolute top-10 -left-32 w-96 h-96 rounded-full bg-lime-500/20 blur-[120px]" />
           <div className="absolute bottom-0 right-0 w-[500px] h-[500px] rounded-full bg-emerald-600/20 blur-[140px]" />
         </div>
-        <div className="max-w-5xl mx-auto px-6 pt-16 pb-12">
-          <div className="flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-lime-400 font-bold">
-            <span>{ex.icon}</span>
-            <span>Bài tập {ex.n}</span>
-          </div>
-          <h1 className="mt-5 font-[Be_Vietnam_Pro,sans-serif] text-3xl md:text-4xl font-extrabold leading-tight tracking-tight text-stone-100">
-            {ex.title}
-          </h1>
-          <p className="mt-5 text-stone-300 leading-relaxed text-base md:text-lg">
-            <span className="font-bold text-lime-400">Mục tiêu: </span>
-            {ex.goal}
-          </p>
-        </div>
-      </section>
-
-      {/* Layout: sidebar sát bên trái + nội dung */}
-      <div className="grid lg:grid-cols-[240px_minmax(0,1fr)] gap-6 lg:gap-8 pb-10 pr-4 lg:pr-8">
-        {/* Sidebar sát mép trái */}
-        <aside className="lg:sticky lg:top-24 lg:self-start lg:pl-4">
+        {/* Sidebar sát mép trái, đẩy lên trên */}
+        <aside className="lg:sticky lg:top-20 lg:self-start lg:pl-4">
           <div className="p-4 rounded-r-2xl lg:rounded-l-none rounded-2xl bg-[#0f160c] border border-[#1e3319] lg:border-l-0">
             <p className="px-2 pb-3 text-[11px] uppercase tracking-[0.25em] text-lime-400 font-bold">🧭 DANH SÁCH BÀI TẬP</p>
             <ul className="flex lg:flex-col gap-2 overflow-x-auto lg:overflow-visible">
@@ -153,7 +137,22 @@ function BaiTapPage() {
         </aside>
 
         {/* Nội dung phải */}
-        <div key={animKey} className="space-y-10 min-w-0 animate-[fadeSlideIn_.45s_ease-out_both] max-w-5xl">
+        <div key={animKey} className="space-y-10 min-w-0 animate-[bounceIn_.7s_cubic-bezier(.34,1.56,.64,1)_both] max-w-5xl px-4 lg:px-0">
+          {/* Hero header */}
+          <div className="pt-4">
+            <div className="flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-lime-400 font-bold">
+              <span>{ex.icon}</span>
+              <span>BÀI TẬP {ex.n}</span>
+            </div>
+            <h1 className="mt-4 font-[Be_Vietnam_Pro,sans-serif] text-2xl md:text-3xl font-extrabold leading-tight tracking-[0.04em] text-stone-100 uppercase">
+              {ex.title}
+            </h1>
+            <p className="mt-4 text-stone-300 leading-relaxed text-base">
+              <span className="font-bold text-lime-400 uppercase tracking-wider text-sm">MỤC TIÊU: </span>
+              {ex.goal}
+            </p>
+          </div>
+
         {/* Mục tiêu bài học chi tiết */}
         <div className="p-7 rounded-2xl bg-[#0f160c] border border-[#1e3319]">
           <h2 className="font-[Be_Vietnam_Pro,sans-serif] font-bold text-lime-400 text-sm tracking-[0.2em] uppercase">🎯 MỤC TIÊU BÀI HỌC CHI TIẾT</h2>
