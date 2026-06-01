@@ -144,7 +144,7 @@ function BaiTapPage() {
               <span>{ex.icon}</span>
               <span>BÀI TẬP {ex.n}</span>
             </div>
-            <h1 className="mt-4 font-[Be_Vietnam_Pro,sans-serif] text-2xl md:text-3xl font-extrabold leading-tight tracking-[0.04em] text-stone-100 uppercase">
+            <h1 className="mt-4 font-[Montserrat,Be_Vietnam_Pro,sans-serif] text-2xl md:text-3xl font-extrabold leading-tight tracking-[0.04em] text-stone-100 uppercase">
               {ex.title}
             </h1>
             <p className="mt-4 text-stone-300 leading-relaxed text-base">
@@ -155,7 +155,7 @@ function BaiTapPage() {
 
         {/* Mục tiêu bài học chi tiết */}
         <div className="p-7 rounded-2xl bg-[#0f160c] border border-[#1e3319]">
-          <h2 className="font-[Be_Vietnam_Pro,sans-serif] font-bold text-lime-400 text-sm tracking-[0.2em] uppercase">🎯 MỤC TIÊU BÀI HỌC CHI TIẾT</h2>
+          <h2 className="font-[Montserrat,Be_Vietnam_Pro,sans-serif] font-bold text-lime-400 text-sm tracking-[0.2em] uppercase">🎯 MỤC TIÊU BÀI HỌC CHI TIẾT</h2>
           <ul className="mt-5 grid md:grid-cols-2 gap-3 text-[15px] text-stone-300 leading-relaxed">
             {ex.objectives.map((o, i) => (
               <li key={i} className="flex gap-3 p-3 rounded-xl bg-[#0a0f08] border border-[#1e3319]">
@@ -185,7 +185,7 @@ function BaiTapPage() {
         </div>
 
         <div className="p-7 rounded-2xl bg-[#0f160c] border border-[#1e3319]">
-          <h2 className="font-[Be_Vietnam_Pro,sans-serif] font-bold text-lime-400 text-sm tracking-[0.2em] uppercase">🛠️ TÓM TẮT QUÁ TRÌNH THỰC HIỆN</h2>
+          <h2 className="font-[Montserrat,Be_Vietnam_Pro,sans-serif] font-bold text-lime-400 text-sm tracking-[0.2em] uppercase">🛠️ TÓM TẮT QUÁ TRÌNH THỰC HIỆN</h2>
           <ol className="mt-5 space-y-4">
             {ex.process.map((step, i) => (
               <li key={i} className="flex gap-4">
@@ -200,7 +200,7 @@ function BaiTapPage() {
 
         {/* Những gì đạt được */}
         <div className="p-7 rounded-2xl bg-gradient-to-br from-[#101a0a] to-[#0a0f08] border border-lime-500/30">
-          <h2 className="font-[Be_Vietnam_Pro,sans-serif] font-bold text-sm tracking-[0.2em] uppercase bg-gradient-to-r from-lime-300 to-yellow-300 bg-clip-text text-transparent">
+          <h2 className="font-[Montserrat,Be_Vietnam_Pro,sans-serif] font-bold text-sm tracking-[0.2em] uppercase bg-gradient-to-r from-lime-300 to-yellow-300 bg-clip-text text-transparent">
             🏆 NHỮNG GÌ ĐẠT ĐƯỢC SAU BÀI TẬP
           </h2>
           <ul className="mt-5 grid gap-3">
@@ -218,7 +218,7 @@ function BaiTapPage() {
         {/* Toàn bộ trang bài tập */}
         <div className="p-7 rounded-2xl bg-[#0f160c] border border-[#1e3319]">
           <div className="flex items-baseline justify-between flex-wrap gap-2">
-            <h2 className="font-[Be_Vietnam_Pro,sans-serif] font-bold text-lime-400 text-sm tracking-[0.2em] uppercase">📑 TOÀN BỘ TRANG BÀI TẬP</h2>
+            <h2 className="font-[Montserrat,Be_Vietnam_Pro,sans-serif] font-bold text-lime-400 text-sm tracking-[0.2em] uppercase">📑 TOÀN BỘ TRANG BÀI TẬP</h2>
             <p className="text-xs text-stone-500">{ex.pages} TRANG · CLICK ĐỂ PHÓNG TO</p>
           </div>
           <div className="mt-5 flex flex-col gap-5 max-w-3xl mx-auto">
