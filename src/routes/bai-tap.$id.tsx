@@ -144,7 +144,7 @@ function BaiTapPage() {
               <span>{ex.icon}</span>
               <span>BÀI TẬP {ex.n}</span>
             </div>
-            <h1 className="mt-4 font-[Montserrat,Be_Vietnam_Pro,sans-serif] text-2xl md:text-3xl font-extrabold leading-tight tracking-[0.04em] text-stone-100 uppercase">
+            <h1 className="mt-4 font-[Montserrat,Be_Vietnam_Pro,sans-serif] text-xl md:text-2xl font-extrabold leading-[1.35] tracking-[0.04em] text-stone-100 uppercase">
               {ex.title}
             </h1>
             <p className="mt-4 text-stone-300 leading-relaxed text-base">
