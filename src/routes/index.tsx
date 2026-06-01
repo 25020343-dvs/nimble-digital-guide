@@ -160,7 +160,7 @@ function Portfolio() {
             </div>
             <div className="mt-5 min-h-[76px]">
               <p className="text-[11px] uppercase tracking-widest text-stone-500 font-semibold">Bài tập {p.n}</p>
-              <h3 className="mt-1 font-[Montserrat,Be_Vietnam_Pro,sans-serif] font-bold text-stone-100 text-[16px] leading-[1.35] line-clamp-2">
+              <h3 className="mt-1 font-[Montserrat,Be_Vietnam_Pro,sans-serif] font-bold text-stone-100 text-[14px] leading-[1.45] line-clamp-2 uppercase tracking-[0.03em]">
                 {p.shortTitle}
               </h3>
             </div>
@@ -313,7 +313,7 @@ function SectionTitle({ id, eyebrow, title, sub }: { id?: string; eyebrow: strin
   return (
     <div id={id} className="scroll-mt-24 max-w-7xl mx-auto px-6 pt-20 pb-10 text-center">
       <p className="text-xs font-bold tracking-[0.3em] uppercase text-lime-400">{eyebrow}</p>
-      <h2 className="mt-3 font-[Montserrat,Be_Vietnam_Pro,sans-serif] text-4xl md:text-5xl font-extrabold text-stone-100 uppercase tracking-[0.05em]">{title}</h2>
+      <h2 className="mt-3 font-[Montserrat,Be_Vietnam_Pro,sans-serif] text-3xl md:text-4xl font-extrabold leading-[1.25] text-stone-100 uppercase tracking-[0.05em]">{title}</h2>
       {sub && <p className="mt-4 max-w-2xl mx-auto text-stone-400">{sub}</p>}
     </div>
   );
