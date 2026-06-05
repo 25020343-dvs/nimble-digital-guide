@@ -31,7 +31,31 @@ const skills = [
   { icon: "🌐", name: "Giao tiếp Số", level: "VỮNG CHẮC", pct: 83 },
 ];
 
-const tools = ["Google Drive","Notion","Trello","ChatGPT","Google Gemini","Canva","Google Scholar","Zoom","Microsoft 365","Runway ML","ElevenLabs","CapCut","Tiêu chí CRAAP","Moodle"];
+const tools = [
+  "File Explorer",
+  "Google Scholar",
+  "Microsoft Academic",
+  "Trello",
+  "Asana",
+  "ClickUp",
+  "Microsoft Planner",
+  "Google Docs",
+  "Microsoft Office Online",
+  "Google Drive",
+  "OneDrive",
+  "Dropbox",
+  "Slack",
+  "Discord",
+  "Microsoft Teams",
+  "ChatGPT",
+  "Google Gemini",
+  "Claude",
+  "DALL-E",
+  "Midjourney",
+  "Stable Diffusion",
+  "Canva AI",
+  "Adobe Firefly",
+];
 
 const ethics = [
   { icon: "🔎", title: "01. Minh Bạch", text: "Tôi luôn ghi chú rõ ràng khi công cụ AI hỗ trợ tạo nội dung học thuật, bao gồm tên công cụ, phiên bản và mức độ sử dụng — coi AI như bất kỳ nguồn tài liệu nào khác." },
@@ -218,7 +242,7 @@ function Portfolio() {
           <p className="vn-heading italic font-medium text-2xl md:text-3xl text-stone-100">
             “Rủi ro thực sự của AI không phải là nó sẽ suy nghĩ thay chúng ta — mà là chúng ta sẽ ngừng tự suy nghĩ.”
           </p>
-          <p className="mt-3 text-sm text-lime-400 font-bold tracking-wide">— Suy ngẫm cá nhân, 2025</p>
+          <p className="mt-3 text-sm text-lime-400 font-bold tracking-wide">— Suy ngẫm cá nhân, 2026</p>
         </div>
       </section>
 
@@ -248,10 +272,6 @@ function Portfolio() {
           </Block>
         </div>
 
-        <div className="mt-10 p-8 rounded-2xl bg-gradient-to-br from-[#121a0f] to-[#0a0f08] border border-[#1e3319] text-center">
-          <p className="text-stone-300 leading-relaxed">Portfolio này không phải sản phẩm hoàn thiện — đây là tài liệu sống về sự phát triển.</p>
-          <p className="mt-4 text-sm tracking-widest text-lime-400 font-bold">{NAME.toUpperCase()} · 2025</p>
-        </div>
       </section>
 
       <footer id="contact" className="border-t border-[#1e3319] bg-[#080c06]">
