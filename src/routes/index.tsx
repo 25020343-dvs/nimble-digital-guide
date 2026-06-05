@@ -82,8 +82,8 @@ function Portfolio() {
             <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold tracking-widest uppercase bg-lime-500/10 border border-lime-500/30 text-lime-400">
               📚 Nhập môn Công nghệ Số và Ứng dụng Trí tuệ Nhân tạo
             </span>
-            <h1 className="mt-6 font-[Montserrat,Be_Vietnam_Pro,sans-serif] text-5xl md:text-7xl font-extrabold leading-[1.05] tracking-tight text-stone-100">
-              <span className="font-[Montserrat,Be_Vietnam_Pro,sans-serif] italic font-extrabold bg-gradient-to-r from-lime-300 via-lime-400 to-emerald-400 bg-clip-text text-transparent">
+            <h1 className="mt-6 vn-heading text-5xl md:text-7xl font-bold text-stone-100">
+              <span className="vn-heading italic font-bold bg-gradient-to-r from-lime-300 via-lime-400 to-emerald-400 bg-clip-text text-transparent">
                 {NAME}
               </span>
             </h1>
@@ -122,7 +122,7 @@ function Portfolio() {
 
         <div className="max-w-7xl mx-auto px-6 pb-24 grid md:grid-cols-2 gap-5">
           <div className="p-7 rounded-2xl bg-[#0f160c] border border-[#1e3319]">
-            <h3 className="font-[Montserrat,Be_Vietnam_Pro,sans-serif] font-bold text-lime-400 text-lg">🎯 Mục Tiêu Học Tập</h3>
+            <h3 className="vn-heading font-bold text-lime-400 text-lg">🎯 Mục Tiêu Học Tập</h3>
             <ul className="mt-4 space-y-2 text-stone-300 text-sm">
               <li>▸ Làm chủ quy trình tổ chức tệp và quản lý số</li>
               <li>▸ Đánh giá phê phán nội dung do AI tạo ra</li>
@@ -132,7 +132,7 @@ function Portfolio() {
             </ul>
           </div>
           <div className="p-7 rounded-2xl bg-[#0f160c] border border-[#1e3319]">
-            <h3 className="font-[Montserrat,Be_Vietnam_Pro,sans-serif] font-bold text-lime-400 text-lg">📂 Mục Đích Portfolio</h3>
+            <h3 className="vn-heading font-bold text-lime-400 text-lg">📂 Mục Đích Portfolio</h3>
             <ul className="mt-4 space-y-2 text-stone-300 text-sm">
               <li>▸ Lưu trữ sản phẩm học thuật số trong một nơi</li>
               <li>▸ Minh chứng sự tiến bộ về năng lực số</li>
@@ -160,7 +160,7 @@ function Portfolio() {
             </div>
             <div className="mt-5 min-h-[76px]">
               <p className="text-[11px] uppercase tracking-widest text-stone-500 font-semibold">Bài tập {p.n}</p>
-              <h3 className="mt-1 font-[Montserrat,Be_Vietnam_Pro,sans-serif] font-bold text-stone-100 text-[14px] leading-[1.45] line-clamp-2 uppercase tracking-[0.03em]">
+              <h3 className="mt-1 vn-heading font-bold text-stone-100 text-[14px] line-clamp-2 uppercase">
                 {p.shortTitle}
               </h3>
             </div>
@@ -187,11 +187,11 @@ function Portfolio() {
               <div className="flex items-center gap-3 min-w-0">
                 <span className="text-2xl">{s.icon}</span>
                 <div className="min-w-0">
-                  <p className="font-[Montserrat,Be_Vietnam_Pro,sans-serif] font-semibold text-stone-100 truncate">{s.name}</p>
+                  <p className="vn-heading font-semibold text-stone-100 truncate">{s.name}</p>
                   <p className="text-[10px] tracking-widest font-bold text-lime-500/80">{s.level}</p>
                 </div>
               </div>
-              <span className="font-[Montserrat,Be_Vietnam_Pro,sans-serif] font-bold text-lime-400">{s.pct}%</span>
+              <span className="vn-heading font-bold text-lime-400">{s.pct}%</span>
             </div>
             <div className="mt-4 h-2 rounded-full bg-[#1a2614] overflow-hidden">
               <div className="h-full bg-gradient-to-r from-lime-500 to-emerald-400" style={{ width: `${s.pct}%` }} />
