@@ -276,7 +276,7 @@ function Portfolio() {
 
       <footer id="contact" className="border-t border-[#1e3319] bg-[#080c06]">
         <div className="max-w-7xl mx-auto px-6 py-14 grid md:grid-cols-12 gap-10">
-          <div className="md:col-span-4">
+          <div className="md:col-span-3">
             <div className="flex items-center gap-3">
               <img src={uetLogo} alt="UET" className="w-10 h-10 rounded-full bg-white p-0.5" />
               <span className="vn-heading font-bold text-stone-100">{NAME}</span>
@@ -284,9 +284,9 @@ function Portfolio() {
             <p className="mt-4 text-sm text-stone-400 max-w-md">
               Portfolio số ghi lại hành trình học tập trong môn Nhập môn Công nghệ Số & Ứng dụng AI Tạo sinh.
             </p>
-            <p className="mt-6 text-xs text-stone-500">© 2025 {NAME}. Bảo lưu mọi quyền.</p>
+            <p className="mt-6 text-xs text-stone-500">© 2026 {NAME}. Bảo lưu mọi quyền.</p>
           </div>
-          <div className="md:col-span-2">
+          <div className="md:col-span-2 md:pl-4">
             <p className="font-bold text-stone-100 mb-3">Điều hướng</p>
             <ul className="space-y-2 text-sm text-stone-400">
               <li><a onClick={(e) => { attachRipple(e); e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }} href="#top" className="relative overflow-hidden inline-block px-1 hover:text-lime-400 transition-all duration-300 active:scale-95">Giới thiệu</a></li>
@@ -316,8 +316,10 @@ function Portfolio() {
           <div className="md:col-span-3">
             <p className="font-bold text-stone-100 mb-3">Liên Hệ</p>
             <ul className="space-y-2 text-sm text-stone-400">
-              <li>🏫 Trường <span className="text-stone-200 font-semibold">Đại học Công nghệ — ĐHQGHN</span></li>
-              <li>🎓 Ngành <span className="text-stone-200 font-semibold">CNTT — K70 — IT5</span></li>
+              <li className="whitespace-nowrap">🏫 Trường <span className="text-stone-200 font-semibold">Đại học Công nghệ — ĐHQGHN</span></li>
+              <li>🎓 Ngành <span className="text-stone-200 font-semibold">Công nghệ Thông tin</span></li>
+              <li>📅 Khoá <span className="text-stone-200 font-semibold">K70</span></li>
+              <li>👥 Lớp <span className="text-stone-200 font-semibold">IT5</span></li>
               <li>📋 Mã lớp <span className="text-stone-200 font-semibold">VNU1001_E252016</span></li>
               <li>🪪 MSV <span className="text-stone-200 font-semibold">25020343</span></li>
               <li className="break-all">✉ <a href={`mailto:${EMAIL}`} className="hover:text-lime-400 font-semibold">{EMAIL}</a></li>
