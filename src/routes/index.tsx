@@ -210,12 +210,12 @@ function Portfolio() {
         {ethics.map(e => (
           <div key={e.title} className="p-6 rounded-2xl bg-[#0f160c] border border-[#1e3319]">
             <span className="text-3xl">{e.icon}</span>
-            <h3 className="mt-4 font-[Montserrat,Be_Vietnam_Pro,sans-serif] font-bold text-stone-100">{e.title}</h3>
+            <h3 className="mt-4 vn-heading font-bold text-stone-100">{e.title}</h3>
             <p className="mt-3 text-sm text-stone-400 leading-relaxed">{e.text}</p>
           </div>
         ))}
         <div className="md:col-span-2 lg:col-span-3 p-8 rounded-2xl bg-gradient-to-br from-lime-500/10 to-emerald-500/5 border border-lime-500/30">
-          <p className="font-[Montserrat,Be_Vietnam_Pro,sans-serif] italic font-medium text-2xl md:text-3xl text-stone-100 leading-snug">
+          <p className="vn-heading italic font-medium text-2xl md:text-3xl text-stone-100">
             “Rủi ro thực sự của AI không phải là nó sẽ suy nghĩ thay chúng ta — mà là chúng ta sẽ ngừng tự suy nghĩ.”
           </p>
           <p className="mt-3 text-sm text-lime-400 font-bold tracking-wide">— Suy ngẫm cá nhân, 2025</p>
@@ -224,7 +224,7 @@ function Portfolio() {
 
       <SectionTitle id="reflection" eyebrow="Tổng kết học kỳ" title="Suy Ngẫm Cá Nhân" />
       <section className="max-w-5xl mx-auto px-6 pb-24">
-        <blockquote className="p-8 rounded-2xl bg-[#0f160c] border-l-4 border-lime-500 font-[Montserrat,Be_Vietnam_Pro,sans-serif] italic font-medium text-xl md:text-2xl text-stone-100 leading-relaxed">
+        <blockquote className="p-8 rounded-2xl bg-[#0f160c] border-l-4 border-lime-500 vn-heading italic font-medium text-xl md:text-2xl text-stone-100">
           “Khóa học này không chỉ dạy tôi cách dùng công nghệ — nó dạy tôi cách suy nghĩ cùng với công nghệ.”
         </blockquote>
 
@@ -259,7 +259,7 @@ function Portfolio() {
           <div className="md:col-span-4">
             <div className="flex items-center gap-3">
               <img src={uetLogo} alt="UET" className="w-10 h-10 rounded-full bg-white p-0.5" />
-              <span className="font-[Montserrat,Be_Vietnam_Pro,sans-serif] font-bold text-stone-100">{NAME}</span>
+              <span className="vn-heading font-bold text-stone-100">{NAME}</span>
             </div>
             <p className="mt-4 text-sm text-stone-400 max-w-md">
               Portfolio số ghi lại hành trình học tập trong môn Nhập môn Công nghệ Số & Ứng dụng AI Tạo sinh.
@@ -313,7 +313,7 @@ function SectionTitle({ id, eyebrow, title, sub }: { id?: string; eyebrow: strin
   return (
     <div id={id} className="scroll-mt-24 max-w-7xl mx-auto px-6 pt-20 pb-10 text-center">
       <p className="text-xs font-bold tracking-[0.3em] uppercase text-lime-400">{eyebrow}</p>
-      <h2 className="mt-3 font-[Montserrat,Be_Vietnam_Pro,sans-serif] text-3xl md:text-4xl font-extrabold leading-[1.25] text-stone-100 uppercase tracking-[0.05em]">{title}</h2>
+      <h2 className="mt-3 vn-heading text-2xl md:text-3xl font-bold text-stone-100 uppercase">{title}</h2>
       {sub && <p className="mt-4 max-w-2xl mx-auto text-stone-400">{sub}</p>}
     </div>
   );
@@ -322,7 +322,7 @@ function SectionTitle({ id, eyebrow, title, sub }: { id?: string; eyebrow: strin
 function Block({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <div className="p-6 rounded-2xl bg-[#0f160c] border border-[#1e3319]">
-      <h3 className="font-[Montserrat,Be_Vietnam_Pro,sans-serif] font-bold text-lime-400">{title}</h3>
+      <h3 className="vn-heading font-bold text-lime-400">{title}</h3>
       <div className="mt-4 text-sm text-stone-300 leading-relaxed">{children}</div>
     </div>
   );
