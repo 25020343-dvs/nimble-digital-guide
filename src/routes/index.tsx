@@ -8,7 +8,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Đỗ Văn Sang — Portfolio Số" },
-      { name: "description", content: "Portfolio số môn Nhập môn Công nghệ Số & Ứng dụng AI Tạo sinh — Đỗ Văn Sang, UET." },
+      { name: "description", content: "Portfolio số ghi lại hành trình học tập trong môn Nhập môn Công nghệ số và Ứng dụng Trí tuệ Nhân tạo — Đỗ Văn Sang, UET." },
     ],
   }),
 });
