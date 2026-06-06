@@ -104,7 +104,7 @@ function Portfolio() {
         <div className="max-w-7xl mx-auto px-6 pt-20 pb-28 grid lg:grid-cols-[1.4fr_1fr] gap-12 items-center">
           <div>
             <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold tracking-widest uppercase bg-lime-500/10 border border-lime-500/30 text-lime-400">
-              📚 Nhập môn Công nghệ Số và Ứng dụng Trí tuệ Nhân tạo
+              📚 Nhập môn Công nghệ số và Ứng dụng Trí tuệ Nhân tạo
             </span>
             <h1 className="mt-6 vn-heading text-5xl md:text-7xl font-bold text-stone-100">
               <span className="vn-heading italic font-bold bg-gradient-to-r from-lime-300 via-lime-400 to-emerald-400 bg-clip-text text-transparent">
