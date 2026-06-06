@@ -8,7 +8,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Đỗ Văn Sang — Portfolio Số" },
-      { name: "description", content: "Portfolio số môn Nhập môn Công nghệ Số & Ứng dụng AI Tạo sinh — Đỗ Văn Sang, UET." },
+      { name: "description", content: "Portfolio số ghi lại hành trình học tập trong môn Nhập môn Công nghệ số và Ứng dụng Trí tuệ Nhân tạo — Đỗ Văn Sang, UET." },
     ],
   }),
 });
@@ -104,7 +104,7 @@ function Portfolio() {
         <div className="max-w-7xl mx-auto px-6 pt-20 pb-28 grid lg:grid-cols-[1.4fr_1fr] gap-12 items-center">
           <div>
             <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold tracking-widest uppercase bg-lime-500/10 border border-lime-500/30 text-lime-400">
-              📚 Nhập môn Công nghệ Số và Ứng dụng Trí tuệ Nhân tạo
+              📚 Nhập môn Công nghệ số và Ứng dụng Trí tuệ Nhân tạo
             </span>
             <h1 className="mt-6 vn-heading text-5xl md:text-7xl font-bold text-stone-100">
               <span className="vn-heading italic font-bold bg-gradient-to-r from-lime-300 via-lime-400 to-emerald-400 bg-clip-text text-transparent">
@@ -129,9 +129,7 @@ function Portfolio() {
               </li>
             </ul>
             <p className="mt-8 max-w-2xl text-lg text-stone-400 leading-relaxed">
-              Tôi là sinh viên năm nhất với niềm đam mê khám phá giao điểm giữa công nghệ và sự sáng tạo.
-              Portfolio này ghi lại hành trình cả học kỳ của tôi trong việc làm chủ công nghệ số, sử dụng AI
-              có trách nhiệm và xây dựng tư duy phản biện trong thời đại số.
+              Tôi là sinh viên năm nhất với niềm đam mê khám phá công nghệ . Portfolio này ghi lại hành trình cả học kỳ của tôi trong việc làm chủ công nghệ số, sử dụng AI có trách nhiệm và xây dựng tư duy phản biện trong thời đại số.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <a onClick={attachRipple} href="#projects" className="relative overflow-hidden px-6 py-3 rounded-xl font-bold text-sm bg-lime-500 text-[#0a0f08] hover:bg-lime-400 transition-all duration-300 shadow-lg shadow-lime-500/20 hover:scale-105 active:scale-95 inline-block">Xem Bài Tập →</a>
