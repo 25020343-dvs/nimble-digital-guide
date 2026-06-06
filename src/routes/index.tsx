@@ -129,9 +129,7 @@ function Portfolio() {
               </li>
             </ul>
             <p className="mt-8 max-w-2xl text-lg text-stone-400 leading-relaxed">
-              Tôi là sinh viên năm nhất với niềm đam mê khám phá giao điểm giữa công nghệ và sự sáng tạo.
-              Portfolio này ghi lại hành trình cả học kỳ của tôi trong việc làm chủ công nghệ số, sử dụng AI
-              có trách nhiệm và xây dựng tư duy phản biện trong thời đại số.
+              Tôi là sinh viên năm nhất với niềm đam mê khám phá công nghệ . Portfolio này ghi lại hành trình cả học kỳ của tôi trong việc làm chủ công nghệ số, sử dụng AI có trách nhiệm và xây dựng tư duy phản biện trong thời đại số.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <a onClick={attachRipple} href="#projects" className="relative overflow-hidden px-6 py-3 rounded-xl font-bold text-sm bg-lime-500 text-[#0a0f08] hover:bg-lime-400 transition-all duration-300 shadow-lg shadow-lime-500/20 hover:scale-105 active:scale-95 inline-block">Xem Bài Tập →</a>
