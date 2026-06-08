@@ -65,7 +65,12 @@ function BaiTapPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#e8f0f8] text-slate-900 font-[Inter,sans-serif] selection:bg-teal-500/30">
+    <div className="min-h-screen text-slate-900 font-[Inter,sans-serif] selection:bg-teal-500/30 relative">
+      <div className="tech-bg" aria-hidden="true">
+        <span className="tech-orb tech-orb-1" />
+        <span className="tech-orb tech-orb-2" />
+        <span className="tech-orb tech-orb-3" />
+      </div>
       <SmoothCursor />
       <header className="sticky top-0 z-50 backdrop-blur-xl bg-[#e8f0f8]/85 border-b border-teal-500/20">
         <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between gap-4">
