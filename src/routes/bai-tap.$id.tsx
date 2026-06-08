@@ -289,7 +289,7 @@ function BaiTapPage() {
 
       <footer className="border-t border-[#b8d4e8] bg-[#d8e6f0]">
         <div className="max-w-7xl mx-auto px-6 py-8 text-center text-xs text-slate-500">
-          © 2025 Đỗ Văn Sang · Portfolio số UET
+          © 2026 Đỗ Văn Sang · Portfolio số UET
         </div>
       </footer>
     </div>
